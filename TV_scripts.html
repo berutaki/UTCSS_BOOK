@@ -1,0 +1,1570 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; 瀧川ゼミ計算社会科学ハンズオンセミナー2024第1回</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'TV_scripts';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo2.png" class="logo__image only-light" alt="瀧川ゼミ計算社会科学ハンズオンセミナー2024第1回 - Home"/>
+    <script>document.write(`<img src="_static/logo2.png" class="logo__image only-dark" alt="瀧川ゼミ計算社会科学ハンズオンセミナー2024第1回 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    瀧川ゼミ計算社会科学ハンズオンセミナー
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-0.html">イントロダクション</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Colab.html">Colabについて</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Basics1.html">2023瀧川ゼミ計算社会科学ハンズオンセミナー1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pandas.html">pandas入門</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/TV_scripts.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span><span class="sa">f</span><span class="s1">&#39;https://subslikescript.com/series/Suits-1632701&#39;</span><span class="c1">#suits スクリプトページ</span>
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="n">soup</span><span class="o">=</span><span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#中身をみて、エピソード名&quot;Pilot&quot;で検索してあたりをつける</span>
+<span class="n">soup</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+
+&lt;html dir=&quot;ltr&quot; lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+&lt;script async=&quot;&quot; src=&quot;https://www.googletagmanager.com/gtag/js?id=UA-120598793-1&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag(&#39;js&#39;, new Date());
+
+  gtag(&#39;config&#39;, &#39;UA-120598793-1&#39;);
+&lt;/script&gt;
+&lt;meta charset=&quot;utf-8&quot;/&gt;
+&lt;title&gt;Suits Episodes&#39; Transcripts  | Subs like Script&lt;/title&gt;
+&lt;meta content=&quot;All available episodes&#39; scripts of TV Show Suits &quot; name=&quot;description&quot;/&gt;
+&lt;meta content=&quot;transcript, episode, series, tv show, television, subtitles, scripts, film, video, media, subs, srt &quot; name=&quot;keywords&quot;/&gt;
+&lt;meta content=&quot;width=device-width, initial-scale=1&quot; name=&quot;viewport&quot;/&gt;
+&lt;meta content=&quot;index, follow&quot; name=&quot;robots&quot;/&gt;
+&lt;link href=&quot;/favicon.ico&quot; rel=&quot;shortcut icon&quot;/&gt;
+&lt;link as=&quot;style&quot; href=&quot;https://subslikescript.com/build/assets/app-55ca003e.css&quot; rel=&quot;preload&quot;&gt;&lt;link href=&quot;https://subslikescript.com/build/assets/app-dd29e20c.js&quot; rel=&quot;modulepreload&quot;/&gt;&lt;link href=&quot;https://subslikescript.com/build/assets/app-55ca003e.css&quot; rel=&quot;stylesheet&quot;/&gt;&lt;script src=&quot;https://subslikescript.com/build/assets/app-dd29e20c.js&quot; type=&quot;module&quot;&gt;&lt;/script&gt; &lt;script async=&quot;&quot; crossorigin=&quot;anonymous&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9736463211397065&quot;&gt;&lt;/script&gt;
+&lt;/link&gt;&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;page-wrapper&quot;&gt;
+&lt;header&gt;
+&lt;div id=&quot;logo&quot;&gt;
+&lt;a href=&quot;/&quot; title=&quot;Subs like Script - all Movies and TV Shows Transcripts&quot;&gt;
+&lt;span&gt;SUBSLIKESCRIPT&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;nav&gt;
+&lt;a href=&quot;/movies&quot; target=&quot;_self&quot; title=&quot;All movies transcripts&quot;&gt;Movies&lt;/a&gt;
+&lt;a href=&quot;/series&quot; target=&quot;_self&quot; title=&quot;All Tv Shows transcripts&quot;&gt;TV Shows&lt;/a&gt;
+&lt;/nav&gt;
+&lt;/header&gt;
+&lt;div class=&quot;main-wrapper&quot;&gt;
+&lt;main class=&quot;mainpage&quot;&gt;
+&lt;nav&gt;
+&lt;ul class=&quot;breadcrumb&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://subslikescript.com/series&quot;&gt;Tv shows&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Suits&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;
+&lt;nav&gt;
+&lt;form action=&quot;https://subslikescript.com/search&quot; class=&quot;searchzone&quot; method=&quot;get&quot; name=&quot;search&quot;&gt;
+&lt;input class=&quot;searchbox&quot; name=&quot;q&quot; type=&quot;text&quot; value=&quot;&quot;/&gt;
+&lt;button class=&quot;searchbutton&quot;&gt;Search&lt;/button&gt;
+&lt;/form&gt;
+&lt;/nav&gt;
+&lt;article class=&quot;main-article&quot;&gt;
+&lt;h1&gt;Suits (2011–…) - episodes with scripts&lt;/h1&gt;
+&lt;p class=&quot;plot&quot;&gt;While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City&#39;s best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory. Mike and Harvey are a winning team. Even though Mike is a genius, he still has a lot to learn about law. And while Harvey may seem like an emotionless, cold-blooded shark, Mike&#39;s sympathy and concern for their cases and clients will help remind Harvey why he went into law in the first place. Mike&#39;s other allies in the office include the firm&#39;s best paralegal Rachel and Harvey&#39;s no-nonsense assistant Donna to help him serve justice. Proving to be an irrepressible duo and invaluable to the practice, Mike and Harvey must keep their secret from everyone including managing partner Jessica and Harvey&#39;s arch nemesis Louis, who seems intent on making Mike&#39;s life as difficult as possible.&lt;/p&gt;
+&lt;script async=&quot;&quot; crossorigin=&quot;anonymous&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9736463211397065&quot;&gt;&lt;/script&gt;
+&lt;!-- content_before_content_square_adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; data-ad-client=&quot;ca-pub-9736463211397065&quot; data-ad-format=&quot;auto&quot; data-ad-slot=&quot;9732296380&quot; data-full-width-responsive=&quot;true&quot; style=&quot;display:block&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;div class=&quot;series_seasons&quot;&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 1&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-1-Pilot&quot; title=&#39;Transcript of episode 1 &quot;Pilot&quot;&#39;&gt;
+                                Pilot
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-2-Errors_and_Omissions&quot; title=&#39;Transcript of episode 2 &quot;Errors and Omissions&quot;&#39;&gt;
+                                Errors and Omissions
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-3-Inside_Track&quot; title=&#39;Transcript of episode 3 &quot;Inside Track&quot;&#39;&gt;
+                                Inside Track
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-4-Dirty_Little_Secrets&quot; title=&#39;Transcript of episode 4 &quot;Dirty Little Secrets&quot;&#39;&gt;
+                                Dirty Little Secrets
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-5-Bail_Out&quot; title=&#39;Transcript of episode 5 &quot;Bail Out&quot;&#39;&gt;
+                                Bail Out
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-6-Tricks_of_the_Trade&quot; title=&#39;Transcript of episode 6 &quot;Tricks of the Trade&quot;&#39;&gt;
+                                Tricks of the Trade
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-7-Play_the_Man&quot; title=&#39;Transcript of episode 7 &quot;Play the Man&quot;&#39;&gt;
+                                Play the Man
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-8-Identity_Crisis&quot; title=&#39;Transcript of episode 8 &quot;Identity Crisis&quot;&#39;&gt;
+                                Identity Crisis
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-9-Undefeated&quot; title=&#39;Transcript of episode 9 &quot;Undefeated&quot;&#39;&gt;
+                                Undefeated
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-10-The_Shelf_Life&quot; title=&#39;Transcript of episode 10 &quot;The Shelf Life&quot;&#39;&gt;
+                                The Shelf Life
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-11-Rules_of_the_Game&quot; title=&#39;Transcript of episode 11 &quot;Rules of the Game&quot;&#39;&gt;
+                                Rules of the Game
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-1/episode-12-Dog_Fight&quot; title=&#39;Transcript of episode 12 &quot;Dog Fight&quot;&#39;&gt;
+                                Dog Fight
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 2&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-1-She_Knows&quot; title=&#39;Transcript of episode 1 &quot;She Knows&quot;&#39;&gt;
+                                She Knows
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-1-DUPE&quot; title=&#39;Transcript of episode 1 &quot;#DUPE#&quot;&#39;&gt;
+                                #DUPE#
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-2-The_Choice&quot; title=&#39;Transcript of episode 2 &quot;The Choice&quot;&#39;&gt;
+                                The Choice
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-3-Meet_the_New_Boss&quot; title=&#39;Transcript of episode 3 &quot;Meet the New Boss&quot;&#39;&gt;
+                                Meet the New Boss
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-4-Discovery&quot; title=&#39;Transcript of episode 4 &quot;Discovery&quot;&#39;&gt;
+                                Discovery
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-5-Break_Point&quot; title=&#39;Transcript of episode 5 &quot;Break Point&quot;&#39;&gt;
+                                Break Point
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-6-All_In&quot; title=&#39;Transcript of episode 6 &quot;All In&quot;&#39;&gt;
+                                All In
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-7-Sucker_Punch&quot; title=&#39;Transcript of episode 7 &quot;Sucker Punch&quot;&#39;&gt;
+                                Sucker Punch
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-8-Rewind&quot; title=&#39;Transcript of episode 8 &quot;Rewind&quot;&#39;&gt;
+                                Rewind
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-9-Asterisk&quot; title=&#39;Transcript of episode 9 &quot;Asterisk&quot;&#39;&gt;
+                                Asterisk
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-10-High_Noon&quot; title=&#39;Transcript of episode 10 &quot;High Noon&quot;&#39;&gt;
+                                High Noon
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-11-Blind-Sided&quot; title=&#39;Transcript of episode 11 &quot;Blind-Sided&quot;&#39;&gt;
+                                Blind-Sided
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-12-Blood_in_the_Water&quot; title=&#39;Transcript of episode 12 &quot;Blood in the Water&quot;&#39;&gt;
+                                Blood in the Water
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            13.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-13-Zane_vs_Zane&quot; title=&#39;Transcript of episode 13 &quot;Zane vs. Zane&quot;&#39;&gt;
+                                Zane vs. Zane
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            14.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-14-Hes_Back&quot; title=&quot;Transcript of episode 14 &amp;quot;He&#39;s Back&amp;quot;&quot;&gt;
+                                He&#39;s Back
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            15.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-15-Normandy&quot; title=&#39;Transcript of episode 15 &quot;Normandy&quot;&#39;&gt;
+                                Normandy
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            16.
+                            &lt;a href=&quot;/series/Suits-1632701/season-2/episode-16-War&quot; title=&#39;Transcript of episode 16 &quot;War&quot;&#39;&gt;
+                                War
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 3&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-1-The_Arrangement&quot; title=&#39;Transcript of episode 1 &quot;The Arrangement&quot;&#39;&gt;
+                                The Arrangement
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-2-I_Want_You_to_Want_Me&quot; title=&#39;Transcript of episode 2 &quot;I Want You to Want Me&quot;&#39;&gt;
+                                I Want You to Want Me
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-3-Unfinished_Business&quot; title=&#39;Transcript of episode 3 &quot;Unfinished Business&quot;&#39;&gt;
+                                Unfinished Business
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-4-Conflict_of_Interest&quot; title=&#39;Transcript of episode 4 &quot;Conflict of Interest&quot;&#39;&gt;
+                                Conflict of Interest
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-5-Shadow_of_a_Doubt&quot; title=&#39;Transcript of episode 5 &quot;Shadow of a Doubt&quot;&#39;&gt;
+                                Shadow of a Doubt
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-6-The_Other_Time&quot; title=&#39;Transcript of episode 6 &quot;The Other Time&quot;&#39;&gt;
+                                The Other Time
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-7-Shes_Mine&quot; title=&quot;Transcript of episode 7 &amp;quot;She&#39;s Mine&amp;quot;&quot;&gt;
+                                She&#39;s Mine
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-8-Endgame&quot; title=&#39;Transcript of episode 8 &quot;Endgame&quot;&#39;&gt;
+                                Endgame
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-9-Bad_Faith&quot; title=&#39;Transcript of episode 9 &quot;Bad Faith&quot;&#39;&gt;
+                                Bad Faith
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-10-Stay&quot; title=&#39;Transcript of episode 10 &quot;Stay&quot;&#39;&gt;
+                                Stay
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-11-Buried_Secrets&quot; title=&#39;Transcript of episode 11 &quot;Buried Secrets&quot;&#39;&gt;
+                                Buried Secrets
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-12-Yesterdays_Gone&quot; title=&quot;Transcript of episode 12 &amp;quot;Yesterday&#39;s Gone&amp;quot;&quot;&gt;
+                                Yesterday&#39;s Gone
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            13.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-13-Moot_Point&quot; title=&#39;Transcript of episode 13 &quot;Moot Point&quot;&#39;&gt;
+                                Moot Point
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            14.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-14-Heartburn&quot; title=&#39;Transcript of episode 14 &quot;Heartburn&quot;&#39;&gt;
+                                Heartburn
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            15.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-15-Know_When_to_Fold_Em&quot; title=&quot;Transcript of episode 15 &amp;quot;Know When to Fold &#39;Em&amp;quot;&quot;&gt;
+                                Know When to Fold &#39;Em
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            16.
+                            &lt;a href=&quot;/series/Suits-1632701/season-3/episode-16-No_Way_Out&quot; title=&#39;Transcript of episode 16 &quot;No Way Out&quot;&#39;&gt;
+                                No Way Out
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 4&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-1-One-Two-Three_Go&quot; title=&#39;Transcript of episode 1 &quot;One-Two-Three Go...&quot;&#39;&gt;
+                                One-Two-Three Go...
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-2-Breakfast_Lunch_and_Dinner&quot; title=&#39;Transcript of episode 2 &quot;Breakfast, Lunch and Dinner&quot;&#39;&gt;
+                                Breakfast, Lunch and Dinner
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-3-Two_in_the_Knees&quot; title=&#39;Transcript of episode 3 &quot;Two in the Knees&quot;&#39;&gt;
+                                Two in the Knees
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-4-Leveraged&quot; title=&#39;Transcript of episode 4 &quot;Leveraged&quot;&#39;&gt;
+                                Leveraged
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-5-Pound_of_Flesh&quot; title=&#39;Transcript of episode 5 &quot;Pound of Flesh&quot;&#39;&gt;
+                                Pound of Flesh
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-6-Litt_the_Hell_Up&quot; title=&#39;Transcript of episode 6 &quot;Litt the Hell Up&quot;&#39;&gt;
+                                Litt the Hell Up
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-7-Were_Done&quot; title=&quot;Transcript of episode 7 &amp;quot;We&#39;re Done&amp;quot;&quot;&gt;
+                                We&#39;re Done
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-8-Exposure&quot; title=&#39;Transcript of episode 8 &quot;Exposure&quot;&#39;&gt;
+                                Exposure
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-9-Gone&quot; title=&#39;Transcript of episode 9 &quot;Gone&quot;&#39;&gt;
+                                Gone
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-10-This_Is_Rome&quot; title=&#39;Transcript of episode 10 &quot;This Is Rome&quot;&#39;&gt;
+                                This Is Rome
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-11-Enough_Is_Enough&quot; title=&#39;Transcript of episode 11 &quot;Enough Is Enough&quot;&#39;&gt;
+                                Enough Is Enough
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-12-Respect&quot; title=&#39;Transcript of episode 12 &quot;Respect&quot;&#39;&gt;
+                                Respect
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            13.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-13-Fork_in_the_Road&quot; title=&#39;Transcript of episode 13 &quot;Fork in the Road&quot;&#39;&gt;
+                                Fork in the Road
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            14.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-14-Derailed&quot; title=&#39;Transcript of episode 14 &quot;Derailed&quot;&#39;&gt;
+                                Derailed
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            15.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-15-Intent&quot; title=&#39;Transcript of episode 15 &quot;Intent&quot;&#39;&gt;
+                                Intent
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            16.
+                            &lt;a href=&quot;/series/Suits-1632701/season-4/episode-16-Not_Just_a_Pretty_Face&quot; title=&#39;Transcript of episode 16 &quot;Not Just a Pretty Face&quot;&#39;&gt;
+                                Not Just a Pretty Face
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 5&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-1-Denial&quot; title=&#39;Transcript of episode 1 &quot;Denial&quot;&#39;&gt;
+                                Denial
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-2-Compensation&quot; title=&#39;Transcript of episode 2 &quot;Compensation&quot;&#39;&gt;
+                                Compensation
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-3-No_Refills&quot; title=&#39;Transcript of episode 3 &quot;No Refills&quot;&#39;&gt;
+                                No Refills
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-4-No_Puedo_Hacerlo&quot; title=&#39;Transcript of episode 4 &quot;No Puedo Hacerlo&quot;&#39;&gt;
+                                No Puedo Hacerlo
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-5-Toe_to_Toe&quot; title=&#39;Transcript of episode 5 &quot;Toe to Toe&quot;&#39;&gt;
+                                Toe to Toe
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-6-Privilege&quot; title=&#39;Transcript of episode 6 &quot;Privilege&quot;&#39;&gt;
+                                Privilege
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-7-Hitting_Home&quot; title=&#39;Transcript of episode 7 &quot;Hitting Home&quot;&#39;&gt;
+                                Hitting Home
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-8-Mea_Culpa&quot; title=&#39;Transcript of episode 8 &quot;Mea Culpa&quot;&#39;&gt;
+                                Mea Culpa
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-9-Uninvited_Guests&quot; title=&#39;Transcript of episode 9 &quot;Uninvited Guests&quot;&#39;&gt;
+                                Uninvited Guests
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-10-Faith&quot; title=&#39;Transcript of episode 10 &quot;Faith&quot;&#39;&gt;
+                                Faith
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-11-Blowback&quot; title=&#39;Transcript of episode 11 &quot;Blowback&quot;&#39;&gt;
+                                Blowback
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-12-Live_to_Fight&quot; title=&#39;Transcript of episode 12 &quot;Live to Fight...&quot;&#39;&gt;
+                                Live to Fight...
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            13.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-13-Gods_Green_Earth&quot; title=&quot;Transcript of episode 13 &amp;quot;God&#39;s Green Earth&amp;quot;&quot;&gt;
+                                God&#39;s Green Earth
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            14.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-14-Self_Defense&quot; title=&#39;Transcript of episode 14 &quot;Self Defense&quot;&#39;&gt;
+                                Self Defense
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            15.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-15-Tick_Tock&quot; title=&#39;Transcript of episode 15 &quot;Tick Tock&quot;&#39;&gt;
+                                Tick Tock
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            16.
+                            &lt;a href=&quot;/series/Suits-1632701/season-5/episode-16-25th_Hour&quot; title=&#39;Transcript of episode 16 &quot;25th Hour&quot;&#39;&gt;
+                                25th Hour
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 6&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-1-To_Trouble&quot; title=&#39;Transcript of episode 1 &quot;To Trouble&quot;&#39;&gt;
+                                To Trouble
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-2-Accounts_Payable&quot; title=&#39;Transcript of episode 2 &quot;Accounts Payable&quot;&#39;&gt;
+                                Accounts Payable
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-3-Back_on_the_Map&quot; title=&#39;Transcript of episode 3 &quot;Back on the Map&quot;&#39;&gt;
+                                Back on the Map
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-4-Turn&quot; title=&#39;Transcript of episode 4 &quot;Turn&quot;&#39;&gt;
+                                Turn
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-5-Trust&quot; title=&#39;Transcript of episode 5 &quot;Trust&quot;&#39;&gt;
+                                Trust
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-6-Spain&quot; title=&#39;Transcript of episode 6 &quot;Spain&quot;&#39;&gt;
+                                Spain
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-7-Shake_the_Trees&quot; title=&#39;Transcript of episode 7 &quot;Shake the Trees&quot;&#39;&gt;
+                                Shake the Trees
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-8-Borrowed_Time&quot; title=&#39;Transcript of episode 8 &quot;Borrowed Time&quot;&#39;&gt;
+                                Borrowed Time
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-9-The_Hand_That_Feeds_You&quot; title=&#39;Transcript of episode 9 &quot;The Hand That Feeds You&quot;&#39;&gt;
+                                The Hand That Feeds You
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-10-PSL&quot; title=&#39;Transcript of episode 10 &quot;P.S.L.&quot;&#39;&gt;
+                                P.S.L.
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-11-Shes_Gone&quot; title=&quot;Transcript of episode 11 &amp;quot;She&#39;s Gone&amp;quot;&quot;&gt;
+                                She&#39;s Gone
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-12-The_Painting&quot; title=&#39;Transcript of episode 12 &quot;The Painting&quot;&#39;&gt;
+                                The Painting
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            13.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-13-Teeth_Nose_Teeth&quot; title=&#39;Transcript of episode 13 &quot;Teeth, Nose, Teeth&quot;&#39;&gt;
+                                Teeth, Nose, Teeth
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            14.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-14-Admission_of_Guilt&quot; title=&#39;Transcript of episode 14 &quot;Admission of Guilt&quot;&#39;&gt;
+                                Admission of Guilt
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            15.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-15-Quid_Pro_Quo&quot; title=&#39;Transcript of episode 15 &quot;Quid Pro Quo&quot;&#39;&gt;
+                                Quid Pro Quo
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            16.
+                            &lt;a href=&quot;/series/Suits-1632701/season-6/episode-16-Character_and_Fitness&quot; title=&#39;Transcript of episode 16 &quot;Character and Fitness&quot;&#39;&gt;
+                                Character and Fitness
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 7&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-1-Skin_in_the_Game&quot; title=&#39;Transcript of episode 1 &quot;Skin in the Game&quot;&#39;&gt;
+                                Skin in the Game
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-2-The_Statue&quot; title=&#39;Transcript of episode 2 &quot;The Statue&quot;&#39;&gt;
+                                The Statue
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-3-Mudmare&quot; title=&#39;Transcript of episode 3 &quot;Mudmare&quot;&#39;&gt;
+                                Mudmare
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-4-Divide_and_Conquer&quot; title=&#39;Transcript of episode 4 &quot;Divide and Conquer&quot;&#39;&gt;
+                                Divide and Conquer
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-5-Brooklyn_Housing&quot; title=&#39;Transcript of episode 5 &quot;Brooklyn Housing&quot;&#39;&gt;
+                                Brooklyn Housing
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-6-Home_to_Roost&quot; title=&#39;Transcript of episode 6 &quot;Home to Roost&quot;&#39;&gt;
+                                Home to Roost
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-7-Full_Disclosure&quot; title=&#39;Transcript of episode 7 &quot;Full Disclosure&quot;&#39;&gt;
+                                Full Disclosure
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-8-100&quot; title=&#39;Transcript of episode 8 &quot;100&quot;&#39;&gt;
+                                100
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-9-Shame&quot; title=&#39;Transcript of episode 9 &quot;Shame&quot;&#39;&gt;
+                                Shame
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-7/episode-10-Donna&quot; title=&#39;Transcript of episode 10 &quot;Donna&quot;&#39;&gt;
+                                Donna
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 8&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-1-Right-Hand_Man&quot; title=&#39;Transcript of episode 1 &quot;Right-Hand Man&quot;&#39;&gt;
+                                Right-Hand Man
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-2-Pecking_Order&quot; title=&#39;Transcript of episode 2 &quot;Pecking Order&quot;&#39;&gt;
+                                Pecking Order
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-3-Promises_Promises&quot; title=&#39;Transcript of episode 3 &quot;Promises, Promises&quot;&#39;&gt;
+                                Promises, Promises
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-4-Revenue_Per_Square_Foot&quot; title=&#39;Transcript of episode 4 &quot;Revenue Per Square Foot&quot;&#39;&gt;
+                                Revenue Per Square Foot
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-5-Good_Mudding&quot; title=&#39;Transcript of episode 5 &quot;Good Mudding&quot;&#39;&gt;
+                                Good Mudding
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-6-Cats_Ballet_Harvey_Specter&quot; title=&#39;Transcript of episode 6 &quot;Cats, Ballet, Harvey Specter&quot;&#39;&gt;
+                                Cats, Ballet, Harvey Specter
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-7-Sour_Grapes&quot; title=&#39;Transcript of episode 7 &quot;Sour Grapes&quot;&#39;&gt;
+                                Sour Grapes
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-8-Coral_Gables&quot; title=&#39;Transcript of episode 8 &quot;Coral Gables&quot;&#39;&gt;
+                                Coral Gables
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            9.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-9-Motion_to_Delay&quot; title=&#39;Transcript of episode 9 &quot;Motion to Delay&quot;&#39;&gt;
+                                Motion to Delay
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            10.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-10-Managing_Partner&quot; title=&#39;Transcript of episode 10 &quot;Managing Partner&quot;&#39;&gt;
+                                Managing Partner
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            11.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-11-Rocky_8&quot; title=&#39;Transcript of episode 11 &quot;Rocky 8&quot;&#39;&gt;
+                                Rocky 8
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            12.
+                            &lt;a href=&quot;/series/Suits-1632701/season-8/episode-12-Whale_Hunt&quot; title=&#39;Transcript of episode 12 &quot;Whale Hunt&quot;&#39;&gt;
+                                Whale Hunt
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class=&quot;season&quot;&gt;
+&lt;h4&gt;Season 9&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+                            1.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-1-Everythings_Changed&quot; title=&quot;Transcript of episode 1 &amp;quot;Everything&#39;s Changed&amp;quot;&quot;&gt;
+                                Everything&#39;s Changed
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            2.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-2-Special_Master&quot; title=&#39;Transcript of episode 2 &quot;Special Master&quot;&#39;&gt;
+                                Special Master
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            3.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-3-Windmills&quot; title=&#39;Transcript of episode 3 &quot;Windmills&quot;&#39;&gt;
+                                Windmills
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            4.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-4-Cairo&quot; title=&#39;Transcript of episode 4 &quot;Cairo&quot;&#39;&gt;
+                                Cairo
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            5.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-5-If_the_Shoe_Fits&quot; title=&#39;Transcript of episode 5 &quot;If the Shoe Fits&quot;&#39;&gt;
+                                If the Shoe Fits
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            6.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-6-Whatever_It_Takes&quot; title=&#39;Transcript of episode 6 &quot;Whatever It Takes&quot;&#39;&gt;
+                                Whatever It Takes
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            7.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-7-Scenic_Route&quot; title=&#39;Transcript of episode 7 &quot;Scenic Route&quot;&#39;&gt;
+                                Scenic Route
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+                            8.
+                            &lt;a href=&quot;/series/Suits-1632701/season-9/episode-8-Prisoners_Dilemma&quot; title=&quot;Transcript of episode 8 &amp;quot;Prisoner&#39;s Dilemma&amp;quot;&quot;&gt;
+                                Prisoner&#39;s Dilemma
+                            &lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;script async=&quot;&quot; crossorigin=&quot;anonymous&quot; src=&quot;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9736463211397065&quot;&gt;&lt;/script&gt;
+&lt;!-- content_before_content_square_adaptive --&gt;
+&lt;ins class=&quot;adsbygoogle&quot; data-ad-client=&quot;ca-pub-9736463211397065&quot; data-ad-format=&quot;auto&quot; data-ad-slot=&quot;9732296380&quot; data-full-width-responsive=&quot;true&quot; style=&quot;display:block&quot;&gt;&lt;/ins&gt;
+&lt;script&gt;
+    (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;/article&gt;
+&lt;/main&gt;
+&lt;div class=&quot;left-side&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;right-side&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;!--main-wrapper div ending--&gt;
+&lt;footer&gt;
+&lt;span class=&quot;contactus&quot;&gt;Have any questions? Contact us: subslikescript(doggysign)gmail.com | &lt;a href=&quot;/dmca&quot;&gt;DMCA&lt;/a&gt;&lt;/span&gt;
+&lt;/footer&gt;
+&lt;/div&gt;
+&lt;!-- wrapper ends --&gt;
+&lt;script&gt;(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement(&#39;script&#39;);d.innerHTML=&quot;window.__CF$cv$params={r:&#39;89055a022c5580f5&#39;,t:&#39;MTcxNzgxMjY5MC4wMDAwMDA=&#39;};var a=document.createElement(&#39;script&#39;);a.nonce=&#39;&#39;;a.src=&#39;/cdn-cgi/challenge-platform/scripts/jsd/main.js&#39;;document.getElementsByTagName(&#39;head&#39;)[0].appendChild(a);&quot;;b.getElementsByTagName(&#39;head&#39;)[0].appendChild(d)}}if(document.body){var a=document.createElement(&#39;iframe&#39;);a.height=1;a.width=1;a.style.position=&#39;absolute&#39;;a.style.top=0;a.style.left=0;a.style.border=&#39;none&#39;;a.style.visibility=&#39;hidden&#39;;document.body.appendChild(a);if(&#39;loading&#39;!==document.readyState)c();else if(window.addEventListener)document.addEventListener(&#39;DOMContentLoaded&#39;,c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);&#39;loading&#39;!==document.readyState&amp;&amp;(document.onreadystatechange=e,c())}}}})();&lt;/script&gt;&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;scripts&#39;</span><span class="p">):</span>
+                <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">&#39;scripts&#39;</span><span class="p">)</span>
+<span class="c1">#このあたりにある</span>
+<span class="c1">#&lt;div class=&quot;season&quot;&gt;&lt;h4&gt;Season 1&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;1. &lt;a href=&quot;/series/Suits-1632701/season-1/episode-1-Pilot&quot; title=&#39;Transcript of episode 1 &quot;Pilot&quot;&#39;&gt;Pilot&lt;/a&gt;&lt;/li&gt;&lt;li&gt;2</span>
+<span class="n">seasons</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;div&#39;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;season&quot;</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">season</span> <span class="ow">in</span> <span class="n">seasons</span><span class="p">:</span>
+    <span class="n">hrefs</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">season</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span><span class="c1">#hrefが存在するaタグ（リンクurl）を抜き出す。</span>
+    <span class="k">for</span> <span class="n">href</span> <span class="ow">in</span> <span class="n">hrefs</span><span class="p">:</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://subslikescript.com&quot;</span><span class="o">+</span><span class="n">href</span><span class="p">)</span><span class="c1">#完全なurlにしてrequests</span>
+        <span class="n">soup_href</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+        <span class="n">scripts</span> <span class="o">=</span> <span class="n">soup_href</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;full-script&quot;</span><span class="p">)</span><span class="c1">#full-scriptに本文がある。</span>
+        <span class="k">for</span> <span class="n">script</span> <span class="ow">in</span> <span class="n">scripts</span><span class="p">([</span><span class="s2">&quot;script&quot;</span><span class="p">,</span> <span class="s2">&quot;ins&quot;</span><span class="p">]):</span><span class="c1"># 広告が入っているため、スクリプトとインスタンスタグを削除</span>
+            <span class="n">script</span><span class="o">.</span><span class="n">decompose</span><span class="p">()</span><span class="c1">#元のsoup_href()から指定されたオブジェクトを削除する</span>
+        <span class="n">clean_text</span> <span class="o">=</span> <span class="n">scripts</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">separator</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;scripts/&#39;</span><span class="o">+</span><span class="n">href</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">],</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span><span class="c1">#hrefの5番目の/の後にエピソード名があるのでファイル名とする</span>
+                <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+                <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Downloaded: &quot;</span> <span class="o">+</span><span class="n">href</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span><span class="s1">&#39;.txt&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-1-Pilot.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-2-Errors_and_Omissions.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-3-Inside_Track.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-4-Dirty_Little_Secrets.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-5-Bail_Out.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-6-Tricks_of_the_Trade.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-7-Play_the_Man.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-8-Identity_Crisis.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-9-Undefeated.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-10-The_Shelf_Life.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-11-Rules_of_the_Game.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-12-Dog_Fight.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-1-She_Knows.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-1-DUPE.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-2-The_Choice.txt
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloaded: episode-3-Meet_the_New_Boss.txt
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">hrefs</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span><span class="p">[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">season</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">href</span><span class="o">=</span><span class="kc">True</span><span class="p">)]</span><span class="c1">#hrefが存在するaタグ（リンクurl）を抜き出す。</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="k">for</span> <span class="n">href</span> <span class="ow">in</span> <span class="n">hrefs</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">9</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;https://subslikescript.com&quot;</span><span class="o">+</span><span class="n">href</span><span class="p">)</span><span class="c1">#完全なurlにしてrequests</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">soup_href</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span><span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">scripts</span> <span class="o">=</span> <span class="n">soup_href</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;full-script&quot;</span><span class="p">)</span><span class="c1">#full-scriptに本文がある。</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">70</span><span class="sd">     :rtype: requests.Response</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/requests/adapters.py:589,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="n">timeout</span> <span class="o">=</span> <span class="n">TimeoutSauce</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">589</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">590</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">592</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">593</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">594</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">595</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">596</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">597</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">599</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">600</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">601</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">603</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">604</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/urllib3/connectionpool.py:793,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span> <span class="c1"># Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">793</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">804</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">808</span> <span class="c1"># Everything went great!</span>
+<span class="g g-Whitespace">    </span><span class="mi">809</span> <span class="n">clean_exit</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/urllib3/connectionpool.py:537,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="c1"># Receive the response from the server</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">537</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">538</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">539</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/site-packages/urllib3/connection.py:466,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> <span class="kn">from</span> <span class="nn">.response</span> <span class="kn">import</span> <span class="n">HTTPResponse</span>
+<span class="g g-Whitespace">    </span><span class="mi">465</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">466</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">468</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">469</span>     <span class="n">assert_header_parsing</span><span class="p">(</span><span class="n">httplib_response</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/http/client.py:1377,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1375</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1376</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1377</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1378</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1379</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/http/client.py:320,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">318</span> <span class="c1"># read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">319</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">320</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">321</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">322</span>         <span class="k">break</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/http/client.py:281,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span> <span class="k">def</span> <span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">281</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">282</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/socket.py:704,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">703</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">704</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/ssl.py:1275,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1271</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1272</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1273</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1274</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1275</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1276</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/cssworkshop/lib/python3.9/ssl.py:1133,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1131</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1132</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1133</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1134</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1135</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ディレクトリへのパス</span>
+<span class="n">directory</span> <span class="o">=</span> <span class="s1">&#39;scripts/&#39;</span>
+
+<span class="c1"># ディレクトリ内のファイル名リストを取得</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">directory</span><span class="p">)]</span>
+
+<span class="c1"># ファイル名を変更</span>
+<span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="n">old_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">directory</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">new_path</span> <span class="o">=</span> <span class="n">old_path</span> <span class="o">+</span> <span class="s1">&#39;.txt&#39;</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">old_path</span><span class="p">,</span> <span class="n">new_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By 瀧川裕貴
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
