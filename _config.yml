@@ -8,7 +8,7 @@ logo: logo2.png
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
 execute:
-  execute_notebooks: auto
+  execute_notebooks: force
 
 execute:
   exclude_output: true
@@ -27,43 +27,7 @@ latex:
 bibtex_bibfiles:
   - references.bib
 
-# Information about where the book exists on the web
-repository:
-  url: https://github.com/executablebooks/jupyter-book  # Online location of your book
-  path_to_book: docs  # Optional path to your book, relative to the repository root
-  branch: master  # Which branch of the repository should be used when creating links (optional)
 
-# Use plotly to show the plots
-sphinx:
-  config:
-    html_js_files:
-    - "https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"
-    
-# _config.yml
-sphinx:
-  config:
-    suppress_warnings: ["mystnb.unknown_mime_type"]
-    jupyter_execute_notebooks: "off"
-    myst_enable_extensions:
-      - amsmath
-      - colon_fence
-      - deflist
-      - html_admonition
-      - html_image
-      - linkify
-      - mathjax
-      - substitution
-      - tasklist
-
-# This ensures that Plotly outputs are correctly handled
-sphinx:
-  config:
-    nb_render_priority:
-      - "text/html"
-      - "application/vnd.plotly.v1+json"
-      - "text/markdown"
-      - "text/plain"
-      
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 repository:
@@ -74,8 +38,14 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
-html:
-  mathjax: true
+#html:
+#  mathjax: true
 
-parse:
- myst_extended_syntax: true
+#parse:
+# myst_extended_syntax: true
+
+sphinx:
+  config:
+    html_js_files:
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    suppress_warnings: ["mystnb.unknown_mime_type"]

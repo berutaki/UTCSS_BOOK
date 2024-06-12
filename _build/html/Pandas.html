@@ -14,19 +14,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
@@ -37,9 +37,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -58,6 +58,7 @@
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Pandas';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="2023瀧川ゼミ計算社会科学ハンズオンセミナー1" href="Basics1.html" />
@@ -70,27 +71,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -112,8 +109,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -195,7 +197,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -204,7 +206,7 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -221,6 +223,53 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/berutaki/UTCSS_BOOK" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/berutaki/UTCSS_BOOK/issues/new?title=Issue%20on%20page%20%2FPandas.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -409,36 +458,20 @@ document.write(`
                   
   <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;google&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#from google.colab import drive</span>
+<span class="c1">#drive.mount(&#39;/content/drive&#39;)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">cd</span> /content/drive/MyDrive/cssws2023
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/cssws2023
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%cd /content/drive/MyDrive/cssws2023</span>
 </pre></div>
 </div>
 </div>
 </div>
-<section id="pandas">
+<section class="tex2jax_ignore mathjax_ignore" id="pandas">
 <h1>pandas入門<a class="headerlink" href="#pandas" title="Link to this heading">#</a></h1>
 <section id="id1">
 <h2>pandasについて<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
@@ -568,6 +601,11 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;total_bill&#39;, &#39;tip&#39;, &#39;sex&#39;, &#39;smoker&#39;, &#39;day&#39;, &#39;time&#39;, &#39;size&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
 </div>
 <ul class="simple">
 <li><p>各列を一列として取り出すとシリーズというオブジェクトになります。</p></li>
@@ -676,10 +714,7 @@ Name: total_bill, Length: 244, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-445a66b6-f995-4a36-a9a0-f54361b7628a">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -753,83 +788,7 @@ Name: total_bill, Length: 244, dtype: float64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-445a66b6-f995-4a36-a9a0-f54361b7628a')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-445a66b6-f995-4a36-a9a0-f54361b7628a button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-445a66b6-f995-4a36-a9a0-f54361b7628a');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -861,9 +820,10 @@ Name: total_bill, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Male      157
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sex
+Male      157
 Female     87
-Name: sex, dtype: int64
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -959,10 +919,7 @@ Name: total_bill, Length: 244, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-73d6e569-9afd-481f-8bad-0dc86f40ae86">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1043,83 +1000,7 @@ Name: total_bill, Length: 244, dtype: float64
   </tbody>
 </table>
 <p>244 rows × 2 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-73d6e569-9afd-481f-8bad-0dc86f40ae86')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-73d6e569-9afd-481f-8bad-0dc86f40ae86 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-73d6e569-9afd-481f-8bad-0dc86f40ae86');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>行の選択はhoge[2:3]のように範囲で指定します。</p></li>
@@ -1131,10 +1012,7 @@ Name: total_bill, Length: 244, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-caf936fe-3bca-468a-99a7-dd7f6550a791">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1174,83 +1052,7 @@ Name: total_bill, Length: 244, dtype: float64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-caf936fe-3bca-468a-99a7-dd7f6550a791')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-caf936fe-3bca-468a-99a7-dd7f6550a791 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-caf936fe-3bca-468a-99a7-dd7f6550a791');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <div class="admonition error">
 <p class="admonition-title">Error</p>
@@ -1267,43 +1069,46 @@ Name: total_bill, Length: 244, dtype: float64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/py39/lib/python3.9/site-packages/pandas/core/indexes/base.py:3802,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3801</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="nn">File ~/miniforge3/envs/cssworkshop/lib/python3.9/site-packages/pandas/core/indexes/base.py:3790,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3789</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">3790</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3791</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
 
-<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/py39/lib/python3.9/site-packages/pandas/_libs/index.pyx:138,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+<span class="nn">File index.pyx:152,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
-<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/py39/lib/python3.9/site-packages/pandas/_libs/index.pyx:165,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
+<span class="nn">File index.pyx:181,</span> in <span class="ni">pandas._libs.index.IndexEngine.get_loc</span><span class="nt">()</span>
 
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5745,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7080,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
 
-<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:5753,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
+<span class="nn">File pandas/_libs/hashtable_class_helper.pxi:7088,</span> in <span class="ni">pandas._libs.hashtable.PyObjectHashTable.get_item</span><span class="nt">()</span>
 
 <span class="ne">KeyError</span>: 1
 
 <span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
 
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">tips</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 
-<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/py39/lib/python3.9/site-packages/pandas/core/frame.py:3807,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">3807</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3808</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+<span class="nn">File ~/miniforge3/envs/cssworkshop/lib/python3.9/site-packages/pandas/core/frame.py:3896,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3894</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3895</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3896</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3897</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3898</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
 
-<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/py39/lib/python3.9/site-packages/pandas/core/indexes/base.py:3804,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key, method, tolerance)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3802</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">casted_key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3803</span> <span class="k">except</span> <span class="ne">KeyError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">3804</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
-<span class="g g-Whitespace">   </span><span class="mi">3805</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">3806</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
-<span class="g g-Whitespace">   </span><span class="mi">3808</span>     <span class="c1">#  the TypeError.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3809</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="nn">File ~/miniforge3/envs/cssworkshop/lib/python3.9/site-packages/pandas/core/indexes/base.py:3797,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3792</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">3793</span>         <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="n">abc</span><span class="o">.</span><span class="n">Iterable</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3794</span>         <span class="ow">and</span> <span class="nb">any</span><span class="p">(</span><span class="nb">isinstance</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">casted_key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">3795</span>     <span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">3796</span>         <span class="k">raise</span> <span class="n">InvalidIndexError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">3797</span>     <span class="k">raise</span> <span class="ne">KeyError</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">err</span>
+<span class="g g-Whitespace">   </span><span class="mi">3798</span> <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">3799</span>     <span class="c1"># If we have a listlike key, _check_indexing_error will raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3800</span>     <span class="c1">#  InvalidIndexError. Otherwise we fall through and re-raise</span>
+<span class="g g-Whitespace">   </span><span class="mi">3801</span>     <span class="c1">#  the TypeError.</span>
+<span class="g g-Whitespace">   </span><span class="mi">3802</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_check_indexing_error</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
 
 <span class="ne">KeyError</span>: 1
 </pre></div>
@@ -1622,10 +1427,7 @@ Name: sex, Length: 244, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-f865c0d0-7847-4a40-8016-54d9d724b613">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1675,83 +1477,7 @@ Name: sex, Length: 244, dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f865c0d0-7847-4a40-8016-54d9d724b613')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-f865c0d0-7847-4a40-8016-54d9d724b613 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f865c0d0-7847-4a40-8016-54d9d724b613');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1799,10 +1525,7 @@ Name: 1, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-4304fd43-f2e3-4e48-b528-3cf58e8eeee6">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -1888,83 +1611,7 @@ Name: 1, dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4304fd43-f2e3-4e48-b528-3cf58e8eeee6')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-4304fd43-f2e3-4e48-b528-3cf58e8eeee6 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4304fd43-f2e3-4e48-b528-3cf58e8eeee6');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>削除したい場合は、tips.drop(‘変数名’, axis = 1)とします。</p></li>
@@ -1983,10 +1630,7 @@ Name: 1, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-764da452-0665-4cd8-9b11-f5552e3c419a">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2066,83 +1710,7 @@ Name: 1, dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-764da452-0665-4cd8-9b11-f5552e3c419a')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-764da452-0665-4cd8-9b11-f5552e3c419a button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-764da452-0665-4cd8-9b11-f5552e3c419a');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 </section>
 <section id="id7">
@@ -2167,9 +1735,10 @@ Name: 1, dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>weekend    163
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>weekend
+weekend    163
 weekday     81
-Name: weekend, dtype: int64
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -2205,12 +1774,13 @@ Name: weekend, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11-20    130
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>bill_cat
+11-20    130
 21-30     65
 31-40     22
 0-10      17
 41+       10
-Name: bill_cat, dtype: int64
+Name: count, dtype: int64
 </pre></div>
 </div>
 </div>
@@ -2329,13 +1899,18 @@ Name: tip, Length: 244, dtype: int64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">21</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">41</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">int</span><span class="p">(</span><span class="n">tips</span><span class="o">.</span><span class="n">tip</span><span class="p">)</span><span class="c1">#これはできない</span>
 
-<span class="nn">File ~/.pyenv/versions/anaconda3-2022.10/envs/py39/lib/python3.9/site-packages/pandas/core/series.py:206,</span> in <span class="ni">_coerce_method.&lt;locals&gt;.wrapper</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">204</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">205</span>     <span class="k">return</span> <span class="n">converter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="ne">--&gt; </span><span class="mi">206</span> <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cannot convert the series to </span><span class="si">{</span><span class="n">converter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nn">File ~/miniforge3/envs/cssworkshop/lib/python3.9/site-packages/pandas/core/series.py:230,</span> in <span class="ni">_coerce_method.&lt;locals&gt;.wrapper</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">222</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span>         <span class="sa">f</span><span class="s2">&quot;Calling </span><span class="si">{</span><span class="n">converter</span><span class="o">.</span><span class="vm">__name__</span><span class="si">}</span><span class="s2"> on a single element Series is &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span>         <span class="s2">&quot;deprecated and will raise a TypeError in the future. &quot;</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">227</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
+<span class="g g-Whitespace">    </span><span class="mi">228</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">229</span>     <span class="k">return</span> <span class="n">converter</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="ne">--&gt; </span><span class="mi">230</span> <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;cannot convert the series to </span><span class="si">{</span><span class="n">converter</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: cannot convert the series to &lt;class &#39;int&#39;&gt;
 </pre></div>
@@ -2381,10 +1956,7 @@ Name: tip, Length: 244, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-d76215e2-4c04-4aa8-8b90-549be9fc283c">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2415,25 +1987,85 @@ Name: tip, Length: 244, dtype: int64
   </thead>
   <tbody>
     <tr>
-      <th>67</th>
-      <td>3.07</td>
-      <td>1.00</td>
-      <td>Female</td>
+      <th>170</th>
+      <td>50.81</td>
+      <td>10.00</td>
+      <td>Male</td>
       <td>Yes</td>
       <td>Sat</td>
       <td>Dinner</td>
-      <td>1</td>
+      <td>3</td>
       <td>weekend</td>
-      <td>0-10</td>
+      <td>41+</td>
     </tr>
     <tr>
-      <th>92</th>
-      <td>5.75</td>
-      <td>1.00</td>
-      <td>Female</td>
-      <td>Yes</td>
-      <td>Fri</td>
+      <th>212</th>
+      <td>48.33</td>
+      <td>9.00</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Sat</td>
       <td>Dinner</td>
+      <td>4</td>
+      <td>weekend</td>
+      <td>41+</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>48.27</td>
+      <td>6.73</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Sat</td>
+      <td>Dinner</td>
+      <td>4</td>
+      <td>weekend</td>
+      <td>41+</td>
+    </tr>
+    <tr>
+      <th>156</th>
+      <td>48.17</td>
+      <td>5.00</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>6</td>
+      <td>weekend</td>
+      <td>41+</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>45.35</td>
+      <td>3.50</td>
+      <td>Male</td>
+      <td>Yes</td>
+      <td>Sun</td>
+      <td>Dinner</td>
+      <td>3</td>
+      <td>weekend</td>
+      <td>41+</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>149</th>
+      <td>7.51</td>
+      <td>2.00</td>
+      <td>Male</td>
+      <td>No</td>
+      <td>Thur</td>
+      <td>Lunch</td>
       <td>2</td>
       <td>weekday</td>
       <td>0-10</td>
@@ -2463,169 +2095,33 @@ Name: tip, Length: 244, dtype: int64
       <td>0-10</td>
     </tr>
     <tr>
-      <th>149</th>
-      <td>7.51</td>
-      <td>2.00</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Thur</td>
-      <td>Lunch</td>
+      <th>92</th>
+      <td>5.75</td>
+      <td>1.00</td>
+      <td>Female</td>
+      <td>Yes</td>
+      <td>Fri</td>
+      <td>Dinner</td>
       <td>2</td>
       <td>weekday</td>
       <td>0-10</td>
     </tr>
     <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>182</th>
-      <td>45.35</td>
-      <td>3.50</td>
-      <td>Male</td>
-      <td>Yes</td>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>3</td>
-      <td>weekend</td>
-      <td>41+</td>
-    </tr>
-    <tr>
-      <th>156</th>
-      <td>48.17</td>
-      <td>5.00</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>6</td>
-      <td>weekend</td>
-      <td>41+</td>
-    </tr>
-    <tr>
-      <th>59</th>
-      <td>48.27</td>
-      <td>6.73</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Sat</td>
-      <td>Dinner</td>
-      <td>4</td>
-      <td>weekend</td>
-      <td>41+</td>
-    </tr>
-    <tr>
-      <th>212</th>
-      <td>48.33</td>
-      <td>9.00</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Sat</td>
-      <td>Dinner</td>
-      <td>4</td>
-      <td>weekend</td>
-      <td>41+</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>50.81</td>
-      <td>10.00</td>
-      <td>Male</td>
+      <th>67</th>
+      <td>3.07</td>
+      <td>1.00</td>
+      <td>Female</td>
       <td>Yes</td>
       <td>Sat</td>
       <td>Dinner</td>
-      <td>3</td>
+      <td>1</td>
       <td>weekend</td>
-      <td>41+</td>
+      <td>0-10</td>
     </tr>
   </tbody>
 </table>
 <p>244 rows × 9 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d76215e2-4c04-4aa8-8b90-549be9fc283c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-d76215e2-4c04-4aa8-8b90-549be9fc283c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d76215e2-4c04-4aa8-8b90-549be9fc283c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>nlargest(10,”変数名”)とすると指定した変数のトップ10を抽出できる。</p></li>
@@ -2637,10 +2133,7 @@ Name: tip, Length: 244, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-846ad9bd-b96f-4188-b4bc-2772d8839bd7">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2792,83 +2285,7 @@ Name: tip, Length: 244, dtype: int64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-846ad9bd-b96f-4188-b4bc-2772d8839bd7')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-846ad9bd-b96f-4188-b4bc-2772d8839bd7 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-846ad9bd-b96f-4188-b4bc-2772d8839bd7');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 </section>
 <section id="id9">
@@ -2890,10 +2307,7 @@ Name: tip, Length: 244, dtype: int64
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-c298f80e-1e4f-4a20-b0b9-3c498e671849">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -2979,93 +2393,14 @@ Name: tip, Length: 244, dtype: int64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c298f80e-1e4f-4a20-b0b9-3c498e671849')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-c298f80e-1e4f-4a20-b0b9-3c498e671849 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c298f80e-1e4f-4a20-b0b9-3c498e671849');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>データフレームgapminderから、カラム ‘country’ と ‘continent’ のみを選択して表示してください。</p></li>
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-5a5067d6-6216-4273-82f1-623f33692aae">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -3146,93 +2481,14 @@ Name: tip, Length: 244, dtype: int64
   </tbody>
 </table>
 <p>1704 rows × 2 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5a5067d6-6216-4273-82f1-623f33692aae')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-5a5067d6-6216-4273-82f1-623f33692aae button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5a5067d6-6216-4273-82f1-623f33692aae');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>データフレームgapminderから、インデックス番号10から19までの行を選択して表示してください。</p></li>
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-b88f4bd4-4456-41ce-8a6d-95e6bacb5070">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -3373,83 +2629,7 @@ Name: tip, Length: 244, dtype: int64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-b88f4bd4-4456-41ce-8a6d-95e6bacb5070')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-b88f4bd4-4456-41ce-8a6d-95e6bacb5070 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-b88f4bd4-4456-41ce-8a6d-95e6bacb5070');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 </section>
 <section id="id11">
@@ -3461,8 +2641,6 @@ Name: tip, Length: 244, dtype: int64
 </ul>
 </li>
 </ul>
-<div class="cell tag_remove-input docutils container">
-</div>
 </section>
 <section id="id12">
 <h4>問題1-3<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
@@ -3472,79 +2650,15 @@ Name: tip, Length: 244, dtype: int64
 <li><p>‘Medium’: 10,000,001-50,000,000</p></li>
 <li><p>‘High’: 50,000,001 以上</p></li>
 </ul>
-<div class="cell tag_remove-input docutils container">
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          country continent  year  lifeExp       pop   gdpPercap iso_alpha  \
-0     Afghanistan      Asia  1952   28.801   8425333  779.445314       AFG   
-1     Afghanistan      Asia  1957   30.332   9240934  820.853030       AFG   
-2     Afghanistan      Asia  1962   31.997  10267083  853.100710       AFG   
-3     Afghanistan      Asia  1967   34.020  11537966  836.197138       AFG   
-4     Afghanistan      Asia  1972   36.088  13079460  739.981106       AFG   
-...           ...       ...   ...      ...       ...         ...       ...   
-1699     Zimbabwe    Africa  1987   62.351   9216418  706.157306       ZWE   
-1700     Zimbabwe    Africa  1992   60.377  10704340  693.420786       ZWE   
-1701     Zimbabwe    Africa  1997   46.809  11404948  792.449960       ZWE   
-1702     Zimbabwe    Africa  2002   39.989  11926563  672.038623       ZWE   
-1703     Zimbabwe    Africa  2007   43.487  12311143  469.709298       ZWE   
-
-      iso_num pop_cat  
-0           4     Low  
-1           4     Low  
-2           4  Medium  
-3           4  Medium  
-4           4  Medium  
-...       ...     ...  
-1699      716     Low  
-1700      716  Medium  
-1701      716  Medium  
-1702      716  Medium  
-1703      716  Medium  
-
-[1704 rows x 9 columns]
-</pre></div>
-</div>
-</div>
-</div>
 </section>
 <section id="id13">
 <h4>問題1-4<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
 <p>データフレームgapminderの’pop’カラムを、人口が1000万人以上の国に対してはその値を2倍にし、それ以外の国に対してはそのままの値を持つ新しいカラムを作成してください。</p>
 <div class="cell tag_remove-input docutils container">
 </div>
-<div class="cell docutils container">
+<div class="cell tag_remove-output docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">gapminder</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>          country continent  year  lifeExp       pop   gdpPercap iso_alpha  \
-0     Afghanistan      Asia  1952   28.801   8425333  779.445314       AFG   
-1     Afghanistan      Asia  1957   30.332   9240934  820.853030       AFG   
-2     Afghanistan      Asia  1962   31.997  10267083  853.100710       AFG   
-3     Afghanistan      Asia  1967   34.020  11537966  836.197138       AFG   
-4     Afghanistan      Asia  1972   36.088  13079460  739.981106       AFG   
-...           ...       ...   ...      ...       ...         ...       ...   
-1699     Zimbabwe    Africa  1987   62.351   9216418  706.157306       ZWE   
-1700     Zimbabwe    Africa  1992   60.377  10704340  693.420786       ZWE   
-1701     Zimbabwe    Africa  1997   46.809  11404948  792.449960       ZWE   
-1702     Zimbabwe    Africa  2002   39.989  11926563  672.038623       ZWE   
-1703     Zimbabwe    Africa  2007   43.487  12311143  469.709298       ZWE   
-
-      iso_num pop_cat      pop2  
-0           4     Low   8425333  
-1           4     Low   9240934  
-2           4  Medium  20534166  
-3           4  Medium  23075932  
-4           4  Medium  26158920  
-...       ...     ...       ...  
-1699      716     Low   9216418  
-1700      716  Medium  21408680  
-1701      716  Medium  22809896  
-1702      716  Medium  23853126  
-1703      716  Medium  24622286  
-
-[1704 rows x 10 columns]
 </pre></div>
 </div>
 </div>
@@ -3563,25 +2677,20 @@ Name: tip, Length: 244, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill    tip     sex smoker   day    time  size
-23        39.42   7.58    Male     No   Sat  Dinner     4
-44        30.40   5.60    Male     No   Sun  Dinner     4
-47        32.40   6.00    Male     No   Sun  Dinner     4
-52        34.81   5.20  Female     No   Sun  Dinner     4
-59        48.27   6.73    Male     No   Sat  Dinner     4
-85        34.83   5.17  Female     No  Thur   Lunch     4
-88        24.71   5.85    Male     No  Thur   Lunch     2
-116       29.93   5.07    Male     No   Sun  Dinner     4
-141       34.30   6.70    Male     No  Thur   Lunch     6
-155       29.85   5.14  Female     No   Sun  Dinner     5
-170       50.81  10.00    Male    Yes   Sat  Dinner     3
-172        7.25   5.15    Male    Yes   Sun  Dinner     2
-181       23.33   5.65    Male    Yes   Sun  Dinner     2
-183       23.17   6.50    Male    Yes   Sun  Dinner     4
-211       25.89   5.16    Male    Yes   Sat  Dinner     4
-212       48.33   9.00    Male     No   Sat  Dinner     4
-214       28.17   6.50  Female    Yes   Sat  Dinner     3
-239       29.03   5.92    Male     No   Sat  Dinner     3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker  day    time  size  weekend bill_cat
+23        39.42  7.58    Male     No  Sat  Dinner     4  weekend    31-40
+44        30.40  5.60    Male     No  Sun  Dinner     4  weekend    31-40
+47        32.40  6.00    Male     No  Sun  Dinner     4  weekend    31-40
+52        34.81  5.20  Female     No  Sun  Dinner     4  weekend    31-40
+59        48.27  6.73    Male     No  Sat  Dinner     4  weekend      41+
+..          ...   ...     ...    ...  ...     ...   ...      ...      ...
+183       23.17  6.50    Male    Yes  Sun  Dinner     4  weekend    21-30
+211       25.89  5.16    Male    Yes  Sat  Dinner     4  weekend    21-30
+212       48.33  9.00    Male     No  Sat  Dinner     4  weekend      41+
+214       28.17  6.50  Female    Yes  Sat  Dinner     3  weekend    21-30
+239       29.03  5.92    Male     No  Sat  Dinner     3  weekend    21-30
+
+[18 rows x 9 columns]
 </pre></div>
 </div>
 </div>
@@ -3593,10 +2702,7 @@ Name: tip, Length: 244, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-e20858b6-a6ab-40bf-93e4-309fb9affe1c">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -3687,28 +2793,16 @@ Name: tip, Length: 244, dtype: int64
       <td>41+</td>
     </tr>
     <tr>
-      <th>85</th>
-      <td>34.83</td>
-      <td>5.17</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>4</td>
-      <td>weekday</td>
-      <td>31-40</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>24.71</td>
-      <td>5.85</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>2</td>
-      <td>weekday</td>
-      <td>21-30</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>116</th>
@@ -3772,83 +2866,8 @@ Name: tip, Length: 244, dtype: int64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-e20858b6-a6ab-40bf-93e4-309fb9affe1c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-e20858b6-a6ab-40bf-93e4-309fb9affe1c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-e20858b6-a6ab-40bf-93e4-309fb9affe1c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+<p>12 rows × 9 columns</p>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>文字列の条件はstr.hoge()を使います。</p>
@@ -3870,20 +2889,20 @@ Name: tip, Length: 244, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker  day    time  size
-0         16.99  1.01  Female     No  Sun  Dinner     2
-1         10.34  1.66    Male     No  Sun  Dinner     3
-2         21.01  3.50    Male     No  Sun  Dinner     3
-3         23.68  3.31    Male     No  Sun  Dinner     2
-4         24.59  3.61  Female     No  Sun  Dinner     4
-..          ...   ...     ...    ...  ...     ...   ...
-238       35.83  4.67  Female     No  Sat  Dinner     3
-239       29.03  5.92    Male     No  Sat  Dinner     3
-240       27.18  2.00  Female    Yes  Sat  Dinner     2
-241       22.67  2.00    Male    Yes  Sat  Dinner     2
-242       17.82  1.75    Male     No  Sat  Dinner     2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker  day    time  size  weekend bill_cat
+0         16.99  1.01  Female     No  Sun  Dinner     2  weekend    11-20
+1         10.34  1.66    Male     No  Sun  Dinner     3  weekend    11-20
+2         21.01  3.50    Male     No  Sun  Dinner     3  weekend    21-30
+3         23.68  3.31    Male     No  Sun  Dinner     2  weekend    21-30
+4         24.59  3.61  Female     No  Sun  Dinner     4  weekend    21-30
+..          ...   ...     ...    ...  ...     ...   ...      ...      ...
+238       35.83  4.67  Female     No  Sat  Dinner     3  weekend    31-40
+239       29.03  5.92    Male     No  Sat  Dinner     3  weekend    21-30
+240       27.18  2.00  Female    Yes  Sat  Dinner     2  weekend    21-30
+241       22.67  2.00    Male    Yes  Sat  Dinner     2  weekend    21-30
+242       17.82  1.75    Male     No  Sat  Dinner     2  weekend    11-20
 
-[163 rows x 7 columns]
+[163 rows x 9 columns]
 </pre></div>
 </div>
 </div>
@@ -3902,10 +2921,7 @@ Name: tip, Length: 244, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-dda9165b-5b15-45b0-851f-5e78280f191e">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -3996,100 +3012,16 @@ Name: tip, Length: 244, dtype: int64
       <td>41+</td>
     </tr>
     <tr>
-      <th>85</th>
-      <td>34.83</td>
-      <td>5.17</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>4</td>
-      <td>weekday</td>
-      <td>31-40</td>
-    </tr>
-    <tr>
-      <th>88</th>
-      <td>24.71</td>
-      <td>5.85</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>2</td>
-      <td>weekday</td>
-      <td>21-30</td>
-    </tr>
-    <tr>
-      <th>116</th>
-      <td>29.93</td>
-      <td>5.07</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>4</td>
-      <td>weekend</td>
-      <td>21-30</td>
-    </tr>
-    <tr>
-      <th>141</th>
-      <td>34.30</td>
-      <td>6.70</td>
-      <td>Male</td>
-      <td>No</td>
-      <td>Thur</td>
-      <td>Lunch</td>
-      <td>6</td>
-      <td>weekday</td>
-      <td>31-40</td>
-    </tr>
-    <tr>
-      <th>155</th>
-      <td>29.85</td>
-      <td>5.14</td>
-      <td>Female</td>
-      <td>No</td>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>5</td>
-      <td>weekend</td>
-      <td>21-30</td>
-    </tr>
-    <tr>
-      <th>170</th>
-      <td>50.81</td>
-      <td>10.00</td>
-      <td>Male</td>
-      <td>Yes</td>
-      <td>Sat</td>
-      <td>Dinner</td>
-      <td>3</td>
-      <td>weekend</td>
-      <td>41+</td>
-    </tr>
-    <tr>
-      <th>172</th>
-      <td>7.25</td>
-      <td>5.15</td>
-      <td>Male</td>
-      <td>Yes</td>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>2</td>
-      <td>weekend</td>
-      <td>0-10</td>
-    </tr>
-    <tr>
-      <th>181</th>
-      <td>23.33</td>
-      <td>5.65</td>
-      <td>Male</td>
-      <td>Yes</td>
-      <td>Sun</td>
-      <td>Dinner</td>
-      <td>2</td>
-      <td>weekend</td>
-      <td>21-30</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>183</th>
@@ -4153,83 +3085,8 @@ Name: tip, Length: 244, dtype: int64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-dda9165b-5b15-45b0-851f-5e78280f191e')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-dda9165b-5b15-45b0-851f-5e78280f191e button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-dda9165b-5b15-45b0-851f-5e78280f191e');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+<p>18 rows × 9 columns</p>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>何が起きているかを確認します。</p>
@@ -4255,246 +3112,13 @@ Name: tip, Length: 244, dtype: int64
 2      False
 3      False
 4      False
-5      False
-6      False
-7      False
-8      False
-9      False
-10     False
-11     False
-12     False
-13     False
-14     False
-15     False
-16     False
-17     False
-18     False
-19     False
-20     False
-21     False
-22     False
-23      True
-24     False
-25     False
-26     False
-27     False
-28     False
-29     False
-30     False
-31     False
-32     False
-33     False
-34     False
-35     False
-36     False
-37     False
-38     False
-39     False
-40     False
-41     False
-42     False
-43     False
-44      True
-45     False
-46     False
-47      True
-48     False
-49     False
-50     False
-51     False
-52      True
-53     False
-54     False
-55     False
-56     False
-57     False
-58     False
-59      True
-60     False
-61     False
-62     False
-63     False
-64     False
-65     False
-66     False
-67     False
-68     False
-69     False
-70     False
-71     False
-72     False
-73     False
-74     False
-75     False
-76     False
-77     False
-78     False
-79     False
-80     False
-81     False
-82     False
-83     False
-84     False
-85      True
-86     False
-87     False
-88      True
-89     False
-90     False
-91     False
-92     False
-93     False
-94     False
-95     False
-96     False
-97     False
-98     False
-99     False
-100    False
-101    False
-102    False
-103    False
-104    False
-105    False
-106    False
-107    False
-108    False
-109    False
-110    False
-111    False
-112    False
-113    False
-114    False
-115    False
-116     True
-117    False
-118    False
-119    False
-120    False
-121    False
-122    False
-123    False
-124    False
-125    False
-126    False
-127    False
-128    False
-129    False
-130    False
-131    False
-132    False
-133    False
-134    False
-135    False
-136    False
-137    False
-138    False
-139    False
-140    False
-141     True
-142    False
-143    False
-144    False
-145    False
-146    False
-147    False
-148    False
-149    False
-150    False
-151    False
-152    False
-153    False
-154    False
-155     True
-156    False
-157    False
-158    False
-159    False
-160    False
-161    False
-162    False
-163    False
-164    False
-165    False
-166    False
-167    False
-168    False
-169    False
-170     True
-171    False
-172     True
-173    False
-174    False
-175    False
-176    False
-177    False
-178    False
-179    False
-180    False
-181     True
-182    False
-183     True
-184    False
-185    False
-186    False
-187    False
-188    False
-189    False
-190    False
-191    False
-192    False
-193    False
-194    False
-195    False
-196    False
-197    False
-198    False
-199    False
-200    False
-201    False
-202    False
-203    False
-204    False
-205    False
-206    False
-207    False
-208    False
-209    False
-210    False
-211     True
-212     True
-213    False
-214     True
-215    False
-216    False
-217    False
-218    False
-219    False
-220    False
-221    False
-222    False
-223    False
-224    False
-225    False
-226    False
-227    False
-228    False
-229    False
-230    False
-231    False
-232    False
-233    False
-234    False
-235    False
-236    False
-237    False
-238    False
+       ...  
 239     True
 240    False
 241    False
 242    False
 243    False
-Name: tip, dtype: bool
+Name: tip, Length: 244, dtype: bool
 </pre></div>
 </div>
 </div>
@@ -4513,20 +3137,20 @@ Name: tip, dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker   day    time  size
-0         16.99  1.01  Female     No   Sun  Dinner     2
-1         10.34  1.66    Male     No   Sun  Dinner     3
-2         21.01  3.50    Male     No   Sun  Dinner     3
-3         23.68  3.31    Male     No   Sun  Dinner     2
-4         24.59  3.61  Female     No   Sun  Dinner     4
-..          ...   ...     ...    ...   ...     ...   ...
-235       10.07  1.25    Male     No   Sat  Dinner     2
-238       35.83  4.67  Female     No   Sat  Dinner     3
-239       29.03  5.92    Male     No   Sat  Dinner     3
-242       17.82  1.75    Male     No   Sat  Dinner     2
-243       18.78  3.00  Female     No  Thur  Dinner     2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker   day    time  size  weekend bill_cat
+0         16.99  1.01  Female     No   Sun  Dinner     2  weekend    11-20
+1         10.34  1.66    Male     No   Sun  Dinner     3  weekend    11-20
+2         21.01  3.50    Male     No   Sun  Dinner     3  weekend    21-30
+3         23.68  3.31    Male     No   Sun  Dinner     2  weekend    21-30
+4         24.59  3.61  Female     No   Sun  Dinner     4  weekend    21-30
+..          ...   ...     ...    ...   ...     ...   ...      ...      ...
+235       10.07  1.25    Male     No   Sat  Dinner     2  weekend    11-20
+238       35.83  4.67  Female     No   Sat  Dinner     3  weekend    31-40
+239       29.03  5.92    Male     No   Sat  Dinner     3  weekend    21-30
+242       17.82  1.75    Male     No   Sat  Dinner     2  weekend    11-20
+243       18.78  3.00  Female     No  Thur  Dinner     2  weekday    11-20
 
-[157 rows x 7 columns]
+[157 rows x 9 columns]
 </pre></div>
 </div>
 </div>
@@ -4544,20 +3168,20 @@ Name: tip, dtype: bool
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker  day    time  size
-0         16.99  1.01  Female     No  Sun  Dinner     2
-1         10.34  1.66    Male     No  Sun  Dinner     3
-2         21.01  3.50    Male     No  Sun  Dinner     3
-3         23.68  3.31    Male     No  Sun  Dinner     2
-4         24.59  3.61  Female     No  Sun  Dinner     4
-..          ...   ...     ...    ...  ...     ...   ...
-238       35.83  4.67  Female     No  Sat  Dinner     3
-239       29.03  5.92    Male     No  Sat  Dinner     3
-240       27.18  2.00  Female    Yes  Sat  Dinner     2
-241       22.67  2.00    Male    Yes  Sat  Dinner     2
-242       17.82  1.75    Male     No  Sat  Dinner     2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     total_bill   tip     sex smoker  day    time  size  weekend bill_cat
+0         16.99  1.01  Female     No  Sun  Dinner     2  weekend    11-20
+1         10.34  1.66    Male     No  Sun  Dinner     3  weekend    11-20
+2         21.01  3.50    Male     No  Sun  Dinner     3  weekend    21-30
+3         23.68  3.31    Male     No  Sun  Dinner     2  weekend    21-30
+4         24.59  3.61  Female     No  Sun  Dinner     4  weekend    21-30
+..          ...   ...     ...    ...  ...     ...   ...      ...      ...
+238       35.83  4.67  Female     No  Sat  Dinner     3  weekend    31-40
+239       29.03  5.92    Male     No  Sat  Dinner     3  weekend    21-30
+240       27.18  2.00  Female    Yes  Sat  Dinner     2  weekend    21-30
+241       22.67  2.00    Male    Yes  Sat  Dinner     2  weekend    21-30
+242       17.82  1.75    Male     No  Sat  Dinner     2  weekend    11-20
 
-[163 rows x 7 columns]
+[163 rows x 9 columns]
 </pre></div>
 </div>
 </div>
@@ -4606,10 +3230,7 @@ Name: smoker, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-1c19525c-59c4-4139-a8bb-34c22d4f925d">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -4784,83 +3405,7 @@ Name: smoker, dtype: int64
   </tbody>
 </table>
 <p>4 rows × 24 columns</p>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-1c19525c-59c4-4139-a8bb-34c22d4f925d')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-1c19525c-59c4-4139-a8bb-34c22d4f925d button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-1c19525c-59c4-4139-a8bb-34c22d4f925d');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <section id="applyagg">
 <h4>applyとagg<a class="headerlink" href="#applyagg" title="Link to this heading">#</a></h4>
@@ -4899,10 +3444,7 @@ Name: total_bill, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-f2579fb9-c7ee-4fe9-90b9-d2f5da948434">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -4952,83 +3494,7 @@ Name: total_bill, dtype: float64
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f2579fb9-c7ee-4fe9-90b9-d2f5da948434')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-f2579fb9-c7ee-4fe9-90b9-d2f5da948434 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f2579fb9-c7ee-4fe9-90b9-d2f5da948434');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -5055,149 +3521,18 @@ Name: total_bill, dtype: float64
 </summary>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>country
-Afghanistan                   802.674598
-Albania                      3255.366633
-Algeria                      4426.025973
-Angola                       3607.100529
-Argentina                    8955.553783
-Australia                   19980.595634
-Austria                     20411.916279
-Bahrain                     18077.663945
-Bangladesh                    817.558818
-Belgium                     19900.758072
-Benin                        1155.395107
-Bolivia                      2961.228754
-Bosnia and Herzegovina       3484.779069
-Botswana                     5031.503557
-Brazil                       5829.316653
-Bulgaria                     6384.055172
-Burkina Faso                  843.990665
-Burundi                       471.662990
-Cambodia                      675.367824
-Cameroon                     1774.634222
-Canada                      22410.746340
-Central African Republic      958.784697
-Chad                         1165.453674
-Chile                        6703.289147
-China                        1488.307694
-Colombia                     4195.342920
-Comoros                      1314.380339
-Congo, Dem. Rep.              648.342646
-Congo, Rep.                  3312.788215
-Costa Rica                   5448.610779
-Cote d&#39;Ivoire                1912.825382
-Croatia                      9331.712346
-Cuba                         6283.258678
-Czech Republic              13920.011379
-Denmark                     21671.824888
-Djibouti                     2697.833162
-Dominican Republic           2844.856405
-Ecuador                      5733.624767
-Egypt                        3074.030731
-El Salvador                  4431.846597
-Equatorial Guinea            2469.166681
-Eritrea                       541.002507
-Ethiopia                      509.115156
-Finland                     17473.722667
-France                      18833.570327
-Gabon                       11529.865474
-Gambia                        680.132586
-Germany                     20556.684433
-Ghana                        1044.582046
-Greece                      13969.036833
-Guatemala                    4015.402771
-Guinea                        776.067305
-Guinea-Bissau                 652.157208
-Haiti                        1620.739290
-Honduras                     2834.413083
-Hong Kong, China            16228.700865
-Hungary                     10888.175654
-Iceland                     20531.422272
-India                        1057.296307
-Indonesia                    1741.365360
-Iran                         7376.582905
-Iraq                         7811.809117
-Ireland                     15758.606238
-Israel                      14160.936434
-Italy                       16245.209006
-Jamaica                      6197.645405
-Japan                       17750.869984
-Jordan                       3128.120762
-Kenya                        1200.415720
-Korea, Dem. Rep.             2591.852578
-Korea, Rep.                  8217.318485
-Kuwait                      65332.910472
-Lebanon                      7269.216241
-Lesotho                       780.553393
-Liberia                       604.814141
-Libya                       12013.579201
-Madagascar                   1335.595027
-Malawi                        575.447212
-Malaysia                     5406.038197
-Mali                          673.093069
-Mauritania                   1356.671011
-Mauritius                    4768.942221
-Mexico                       7724.112675
-Mongolia                     1692.804612
-Montenegro                   7208.064560
-Morocco                      2447.908864
-Mozambique                    542.278332
-Myanmar                       439.333333
-Namibia                      3675.582087
-Nepal                         782.728822
-Netherlands                 21748.852208
-New Zealand                 17262.622813
-Nicaragua                    3424.655770
-Niger                         781.076798
-Nigeria                      1488.309429
-Norway                      26747.306554
-Oman                        12138.562227
-Pakistan                     1439.270689
-Panama                       5754.827172
-Paraguay                     3239.606791
-Peru                         5613.844087
-Philippines                  2174.771130
-Poland                       8416.553912
-Portugal                    11354.091927
-Puerto Rico                 10863.164303
-Reunion                      4898.398390
-Romania                      7300.169974
-Rwanda                        675.669043
-Sao Tome and Principe        1382.782001
-Saudi Arabia                20261.743635
-Senegal                      1533.121694
-Serbia                       9305.049444
-Sierra Leone                 1072.819493
-Singapore                   17425.382267
-Slovak Republic             10415.530689
-Slovenia                    14074.582109
-Somalia                      1140.793252
-South Africa                 7247.431074
-Spain                       14029.826479
-Sri Lanka                    1854.731119
-Sudan                        1835.010430
-Swaziland                    3163.352358
-Sweden                      19943.126104
-Switzerland                 27074.334405
-Syria                        3009.287981
-Taiwan                      10224.807181
-Tanzania                      849.281271
-Thailand                     3045.966474
-Togo                         1153.820116
-Trinidad and Tobago          7866.871946
-Tunisia                      3477.210351
-Turkey                       4469.453380
-Uganda                        810.383788
-United Kingdom              19380.472986
-United States               26261.151347
-Uruguay                      7100.133176
-Venezuela                   10088.516252
-Vietnam                      1017.712615
-West Bank and Gaza           3759.996781
-Yemen, Rep.                  1569.274672
-Zambia                       1358.199409
-Zimbabwe                      635.858042
-Name: gdpPercap, dtype: float64
+Afghanistan            802.674598
+Albania               3255.366633
+Algeria               4426.025973
+Angola                3607.100529
+Argentina             8955.553783
+                         ...     
+Vietnam               1017.712615
+West Bank and Gaza    3759.996781
+Yemen, Rep.           1569.274672
+Zambia                1358.199409
+Zimbabwe               635.858042
+Name: gdpPercap, Length: 142, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -5252,10 +3587,7 @@ Name: country, dtype: object
 </div>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-a9603e74-082c-49f7-9d97-7898a1c8b60e">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -5310,83 +3642,7 @@ Name: country, dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-a9603e74-082c-49f7-9d97-7898a1c8b60e')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-a9603e74-082c-49f7-9d97-7898a1c8b60e button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-a9603e74-082c-49f7-9d97-7898a1c8b60e');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 </section>
 <section id="id20">
@@ -5410,14 +3666,13 @@ Name: country, dtype: object
 1962     [China, India, United States, Indonesia, Japan]
 1967     [China, India, United States, Indonesia, Japan]
 1972     [China, India, United States, Indonesia, Japan]
-1977    [China, India, United States, Indonesia, Brazil]
-1982    [China, India, United States, Indonesia, Brazil]
+                              ...                       
 1987    [China, India, United States, Indonesia, Brazil]
 1992    [China, India, United States, Indonesia, Brazil]
 1997    [China, India, United States, Indonesia, Brazil]
 2002    [China, India, United States, Indonesia, Brazil]
 2007    [China, India, United States, Indonesia, Brazil]
-dtype: object
+Length: 12, dtype: object
 </pre></div>
 </div>
 </div>
@@ -5434,62 +3689,13 @@ Africa     1952    [Algeria, Angola, Congo, Rep., Cote d&#39;Ivoire, ...
            1962    [Algeria, Angola, Congo, Rep., Cote d&#39;Ivoire, ...
            1967    [Algeria, Angola, Congo, Rep., Cote d&#39;Ivoire, ...
            1972    [Algeria, Angola, Congo, Rep., Cote d&#39;Ivoire, ...
-           1977    [Algeria, Angola, Botswana, Congo, Rep., Djibo...
-           1982    [Algeria, Angola, Botswana, Congo, Rep., Cote ...
-           1987    [Algeria, Angola, Botswana, Cameroon, Congo, R...
-           1992    [Algeria, Angola, Botswana, Congo, Rep., Djibo...
-           1997    [Algeria, Botswana, Congo, Rep., Egypt, Equato...
-           2002    [Algeria, Angola, Botswana, Congo, Rep., Egypt...
-           2007    [Algeria, Angola, Botswana, Congo, Rep., Egypt...
-Americas   1952    [Argentina, Canada, Cuba, United States, Urugu...
-           1957    [Argentina, Canada, Cuba, Jamaica, United Stat...
-           1962    [Argentina, Canada, Cuba, Jamaica, Peru, Puert...
-           1967    [Argentina, Canada, Cuba, Jamaica, Mexico, Per...
-           1972    [Argentina, Canada, Jamaica, Mexico, Puerto Ri...
-           1977    [Argentina, Canada, Mexico, Puerto Rico, Trini...
-           1982    [Argentina, Canada, Mexico, Puerto Rico, Trini...
-           1987    [Argentina, Brazil, Canada, Mexico, Puerto Ric...
-           1992    [Argentina, Canada, Mexico, Puerto Rico, Unite...
-           1997    [Argentina, Canada, Chile, Mexico, Puerto Rico...
-           2002    [Canada, Chile, Mexico, Puerto Rico, Trinidad ...
-           2007    [Argentina, Canada, Chile, Mexico, Puerto Rico...
-Asia       1952                      [Bahrain, Kuwait, Saudi Arabia]
-           1957       [Bahrain, Iraq, Kuwait, Lebanon, Saudi Arabia]
-           1962    [Bahrain, Iraq, Israel, Japan, Kuwait, Saudi A...
-           1967    [Bahrain, Hong Kong, China, Iraq, Israel, Japa...
-           1972    [Bahrain, Hong Kong, China, Iran, Iraq, Israel...
-           1977    [Bahrain, Hong Kong, China, Iran, Iraq, Israel...
-           1982    [Bahrain, Hong Kong, China, Iran, Iraq, Israel...
-           1987    [Bahrain, Hong Kong, China, Iraq, Israel, Japa...
-           1992    [Bahrain, Hong Kong, China, Israel, Japan, Kor...
-           1997    [Bahrain, Hong Kong, China, Israel, Japan, Kor...
-           2002    [Bahrain, Hong Kong, China, Israel, Japan, Kor...
-           2007    [Bahrain, Hong Kong, China, Israel, Japan, Kor...
-Europe     1952    [Austria, Belgium, Czech Republic, Denmark, Fi...
-           1957    [Austria, Belgium, Czech Republic, Denmark, Fi...
-           1962    [Austria, Belgium, Czech Republic, Denmark, Fi...
-           1967    [Austria, Belgium, Czech Republic, Denmark, Fi...
-           1972    [Austria, Belgium, Czech Republic, Denmark, Fi...
-           1977    [Austria, Belgium, Czech Republic, Denmark, Fi...
-           1982    [Austria, Belgium, Denmark, Finland, France, G...
-           1987    [Austria, Belgium, Denmark, Finland, France, G...
-           1992    [Austria, Belgium, Denmark, Finland, France, G...
-           1997    [Austria, Belgium, Denmark, Finland, France, G...
-           2002    [Austria, Belgium, Denmark, Finland, France, G...
-           2007    [Austria, Belgium, Denmark, Finland, France, G...
-Oceania    1952                                        [New Zealand]
-           1957                                        [New Zealand]
-           1962                                        [New Zealand]
-           1967                                          [Australia]
-           1972                                          [Australia]
-           1977                                          [Australia]
-           1982                                          [Australia]
-           1987                                          [Australia]
+                                         ...                        
+Oceania    1987                                          [Australia]
            1992                                          [Australia]
            1997                                          [Australia]
            2002                                          [Australia]
            2007                                          [Australia]
-dtype: object
+Length: 60, dtype: object
 </pre></div>
 </div>
 </div>
@@ -5518,6 +3724,58 @@ dtype: object
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>birthyear</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>マックス</td>
+      <td>1864</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>エミール</td>
+      <td>1858</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ゲオルグ</td>
+      <td>1858</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>タルコット</td>
+      <td>1902</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ロバート</td>
+      <td>1910</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>リストから作る場合、2次元のリストを元とします。</p></li>
@@ -5691,27 +3949,27 @@ dtype: object
   </thead>
   <tbody>
     <tr>
-      <th>A</th>
+      <th>0</th>
       <td>マックス</td>
       <td>1864</td>
     </tr>
     <tr>
-      <th>B</th>
+      <th>1</th>
       <td>エミール</td>
       <td>1858</td>
     </tr>
     <tr>
-      <th>C</th>
+      <th>2</th>
       <td>ゲオルグ</td>
       <td>1858</td>
     </tr>
     <tr>
-      <th>D</th>
+      <th>3</th>
       <td>タルコット</td>
       <td>1902</td>
     </tr>
     <tr>
-      <th>E</th>
+      <th>4</th>
       <td>ロバート</td>
       <td>1910</td>
     </tr>
@@ -5753,27 +4011,27 @@ dtype: object
   </thead>
   <tbody>
     <tr>
-      <th>A</th>
+      <th>0</th>
       <td>マックス</td>
       <td>1864</td>
     </tr>
     <tr>
-      <th>B</th>
+      <th>1</th>
       <td>エミール</td>
       <td>1858</td>
     </tr>
     <tr>
-      <th>C</th>
+      <th>2</th>
       <td>ゲオルグ</td>
       <td>1858</td>
     </tr>
     <tr>
-      <th>D</th>
+      <th>3</th>
       <td>タルコット</td>
       <td>1902</td>
     </tr>
     <tr>
-      <th>E</th>
+      <th>4</th>
       <td>ロバート</td>
       <td>1910</td>
     </tr>
@@ -5996,10 +4254,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-d1b92491-8cd0-4d62-830c-ceb3f1119e2c">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -6049,83 +4304,7 @@ dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-d1b92491-8cd0-4d62-830c-ceb3f1119e2c')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-d1b92491-8cd0-4d62-830c-ceb3f1119e2c button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-d1b92491-8cd0-4d62-830c-ceb3f1119e2c');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6134,10 +4313,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-c15adda2-8b76-41a1-9ee3-e31525ebf34b">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -6187,83 +4363,7 @@ dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-c15adda2-8b76-41a1-9ee3-e31525ebf34b')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-c15adda2-8b76-41a1-9ee3-e31525ebf34b button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-c15adda2-8b76-41a1-9ee3-e31525ebf34b');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>横に結語するには、pd.merge()として、結合したいデータフレームを引数に与え、’on’にkeyとして使う列名を指定します。</p></li>
@@ -6275,10 +4375,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-96314bc2-0fb1-4495-8767-4b89ac8de664">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -6334,83 +4431,7 @@ dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-96314bc2-0fb1-4495-8767-4b89ac8de664')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-96314bc2-0fb1-4495-8767-4b89ac8de664 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-96314bc2-0fb1-4495-8767-4b89ac8de664');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -6419,10 +4440,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html">
-  <div id="df-f0f823c1-4549-489d-a6dc-a8a5c1ad57c8">
-    <div class="colab-df-container">
-      <div>
+<div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
@@ -6478,83 +4496,7 @@ dtype: object
     </tr>
   </tbody>
 </table>
-</div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f0f823c1-4549-489d-a6dc-a8a5c1ad57c8')"
-              title="Convert this dataframe to an interactive table."
-              style="display:none;">
-        
-  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
-       width="24px">
-    <path d="M0 0h24v24H0V0z" fill="none"/>
-    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
-  </svg>
-      </button>
-      
-  <style>
-    .colab-df-container {
-      display:flex;
-      flex-wrap:wrap;
-      gap: 12px;
-    }
-
-    .colab-df-convert {
-      background-color: #E8F0FE;
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      display: none;
-      fill: #1967D2;
-      height: 32px;
-      padding: 0 0 0 0;
-      width: 32px;
-    }
-
-    .colab-df-convert:hover {
-      background-color: #E2EBFA;
-      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
-      fill: #174EA6;
-    }
-
-    [theme=dark] .colab-df-convert {
-      background-color: #3B4455;
-      fill: #D2E3FC;
-    }
-
-    [theme=dark] .colab-df-convert:hover {
-      background-color: #434B5C;
-      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
-      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
-      fill: #FFFFFF;
-    }
-  </style>
-
-      <script>
-        const buttonEl =
-          document.querySelector('#df-f0f823c1-4549-489d-a6dc-a8a5c1ad57c8 button.colab-df-convert');
-        buttonEl.style.display =
-          google.colab.kernel.accessAllowed ? 'block' : 'none';
-
-        async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f0f823c1-4549-489d-a6dc-a8a5c1ad57c8');
-          const dataTable =
-            await google.colab.kernel.invokeFunction('convertToInteractive',
-                                                     [key], {});
-          if (!dataTable) return;
-
-          const docLinkHtml = 'Like what you see? Visit the ' +
-            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
-            + ' to learn more about interactive tables.';
-          element.innerHTML = '';
-          dataTable['output_type'] = 'display_data';
-          await google.colab.output.renderOutput(dataTable, element);
-          const docLink = document.createElement('div');
-          docLink.innerHTML = docLinkHtml;
-          element.appendChild(docLink);
-        }
-      </script>
-    </div>
-  </div>
-  </div></div>
+</div></div></div>
 </div>
 <ul class="simple">
 <li><p>縦に結合するには、concat()を使いますが、まず練習用の別のデータフレームを作ります。</p></li>
@@ -6609,15 +4551,62 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">53</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df1</span><span class="p">,</span><span class="n">df3</span><span class="p">])</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;df1&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>birthyear</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>マックス</td>
+      <td>1864</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>エミール</td>
+      <td>1858</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ゲオルグ</td>
+      <td>1858</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>タルコット</td>
+      <td>1902</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ロバート</td>
+      <td>1910</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>ガブリエル</td>
+      <td>1843</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 </section>
@@ -6982,23 +4971,6 @@ dtype: object
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output text_html">        <script type="text/javascript">
-        window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax && window.MathJax.Hub && window.MathJax.Hub.Config) {window.MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
-        if (typeof require !== 'undefined') {
-        require.undef("plotly");
-        requirejs.config({
-            paths: {
-                'plotly': ['https://cdn.plot.ly/plotly-2.18.2.min']
-            }
-        });
-        require(['plotly'], function(Plotly) {
-            window._Plotly = Plotly;
-        });
-        }
-        </script>
-        </div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -7020,31 +4992,7 @@ dtype: object
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>                            <div id="a439cab6-9740-4e41-9bb3-5f27e359046f" class="plotly-graph-div" style="height:525px; width:100%;"></div>            <script type="text/javascript">                require(["plotly"], function(Plotly) {                    window.PLOTLYENV=window.PLOTLYENV || {};                                    if (document.getElementById("a439cab6-9740-4e41-9bb3-5f27e359046f")) {                    Plotly.newPlot(                        "a439cab6-9740-4e41-9bb3-5f27e359046f",                        [{"hovertemplate":"total_bill=%{x}<br>tip=%{y}<extra></extra>","legendgroup":"","marker":{"color":"#636efa","symbol":"circle"},"mode":"markers","name":"","orientation":"v","showlegend":false,"x":[16.99,10.34,21.01,23.68,24.59,25.29,8.77,26.88,15.04,14.78,10.27,35.26,15.42,18.43,14.83,21.58,10.33,16.29,16.97,20.65,17.92,20.29,15.77,39.42,19.82,17.81,13.37,12.69,21.7,19.65,9.55,18.35,15.06,20.69,17.78,24.06,16.31,16.93,18.69,31.27,16.04,17.46,13.94,9.68,30.4,18.29,22.23,32.4,28.55,18.04,12.54,10.29,34.81,9.94,25.56,19.49,38.01,26.41,11.24,48.27,20.29,13.81,11.02,18.29,17.59,20.08,16.45,3.07,20.23,15.01,12.02,17.07,26.86,25.28,14.73,10.51,17.92,27.2,22.76,17.29,19.44,16.66,10.07,32.68,15.98,34.83,13.03,18.28,24.71,21.16,28.97,22.49,5.75,16.32,22.75,40.17,27.28,12.03,21.01,12.46,11.35,15.38,44.3,22.42,20.92,15.36,20.49,25.21,18.24,14.31,14.0,7.25,38.07,23.95,25.71,17.31,29.93,10.65,12.43,24.08,11.69,13.42,14.26,15.95,12.48,29.8,8.52,14.52,11.38,22.82,19.08,20.27,11.17,12.26,18.26,8.51,10.33,14.15,16.0,13.16,17.47,34.3,41.19,27.05,16.43,8.35,18.64,11.87,9.78,7.51,14.07,13.13,17.26,24.55,19.77,29.85,48.17,25.0,13.39,16.49,21.5,12.66,16.21,13.81,17.51,24.52,20.76,31.71,10.59,10.63,50.81,15.81,7.25,31.85,16.82,32.9,17.89,14.48,9.6,34.63,34.65,23.33,45.35,23.17,40.55,20.69,20.9,30.46,18.15,23.1,15.69,19.81,28.44,15.48,16.58,7.56,10.34,43.11,13.0,13.51,18.71,12.74,13.0,16.4,20.53,16.47,26.59,38.73,24.27,12.76,30.06,25.89,48.33,13.27,28.17,12.9,28.15,11.59,7.74,30.14,12.16,13.42,8.58,15.98,13.42,16.27,10.09,20.45,13.28,22.12,24.01,15.69,11.61,10.77,15.53,10.07,12.6,32.83,35.83,29.03,27.18,22.67,17.82,18.78],"xaxis":"x","y":[1.01,1.66,3.5,3.31,3.61,4.71,2.0,3.12,1.96,3.23,1.71,5.0,1.57,3.0,3.02,3.92,1.67,3.71,3.5,3.35,4.08,2.75,2.23,7.58,3.18,2.34,2.0,2.0,4.3,3.0,1.45,2.5,3.0,2.45,3.27,3.6,2.0,3.07,2.31,5.0,2.24,2.54,3.06,1.32,5.6,3.0,5.0,6.0,2.05,3.0,2.5,2.6,5.2,1.56,4.34,3.51,3.0,1.5,1.76,6.73,3.21,2.0,1.98,3.76,2.64,3.15,2.47,1.0,2.01,2.09,1.97,3.0,3.14,5.0,2.2,1.25,3.08,4.0,3.0,2.71,3.0,3.4,1.83,5.0,2.03,5.17,2.0,4.0,5.85,3.0,3.0,3.5,1.0,4.3,3.25,4.73,4.0,1.5,3.0,1.5,2.5,3.0,2.5,3.48,4.08,1.64,4.06,4.29,3.76,4.0,3.0,1.0,4.0,2.55,4.0,3.5,5.07,1.5,1.8,2.92,2.31,1.68,2.5,2.0,2.52,4.2,1.48,2.0,2.0,2.18,1.5,2.83,1.5,2.0,3.25,1.25,2.0,2.0,2.0,2.75,3.5,6.7,5.0,5.0,2.3,1.5,1.36,1.63,1.73,2.0,2.5,2.0,2.74,2.0,2.0,5.14,5.0,3.75,2.61,2.0,3.5,2.5,2.0,2.0,3.0,3.48,2.24,4.5,1.61,2.0,10.0,3.16,5.15,3.18,4.0,3.11,2.0,2.0,4.0,3.55,3.68,5.65,3.5,6.5,3.0,5.0,3.5,2.0,3.5,4.0,1.5,4.19,2.56,2.02,4.0,1.44,2.0,5.0,2.0,2.0,4.0,2.01,2.0,2.5,4.0,3.23,3.41,3.0,2.03,2.23,2.0,5.16,9.0,2.5,6.5,1.1,3.0,1.5,1.44,3.09,2.2,3.48,1.92,3.0,1.58,2.5,2.0,3.0,2.72,2.88,2.0,3.0,3.39,1.47,3.0,1.25,1.0,1.17,4.67,5.92,2.0,2.0,1.75,3.0],"yaxis":"y","type":"scatter"}],                        {"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmapgl":[{"type":"heatmapgl","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}},"xaxis":{"anchor":"y","domain":[0.0,1.0],"title":{"text":"total_bill"}},"yaxis":{"anchor":"x","domain":[0.0,1.0],"title":{"text":"tip"}},"legend":{"tracegroupgap":0},"margin":{"t":60}},                        {"responsive": true}                    ).then(function(){
-                            
-var gd = document.getElementById('a439cab6-9740-4e41-9bb3-5f27e359046f');
-var x = new MutationObserver(function (mutations, observer) {{
-        var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
-            console.log([gd, 'removed!']);
-            Plotly.purge(gd);
-            observer.disconnect();
-        }}
-}});
-
-// Listen for the removal of the full notebook cells
-var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
-    x.observe(notebookContainer, {childList: true});
-}}
-
-// Listen for the clearing of the current output cell
-var outputEl = gd.closest('.output');
-if (outputEl) {{
-    x.observe(outputEl, {childList: true});
-}}
-
-                        })                };                });            </script>        </div></div></div>
+</div>
 </div>
 <ul class="simple">
 <li><p>color=’size’などと指定すると客のサイズごとのデータ点を区別できます。</p></li>
@@ -7243,7 +5191,7 @@ if (outputEl) {{
       <td>Japan</td>
       <td>Asia</td>
       <td>1952</td>
-      <td>63.030</td>
+      <td>63.03</td>
       <td>86459025</td>
       <td>3216.956347</td>
       <td>JPN</td>
@@ -7254,7 +5202,7 @@ if (outputEl) {{
       <td>Japan</td>
       <td>Asia</td>
       <td>1957</td>
-      <td>65.500</td>
+      <td>65.50</td>
       <td>91563009</td>
       <td>4317.694365</td>
       <td>JPN</td>
@@ -7265,7 +5213,7 @@ if (outputEl) {{
       <td>Japan</td>
       <td>Asia</td>
       <td>1962</td>
-      <td>68.730</td>
+      <td>68.73</td>
       <td>95831757</td>
       <td>6576.649461</td>
       <td>JPN</td>
@@ -7276,7 +5224,7 @@ if (outputEl) {{
       <td>Japan</td>
       <td>Asia</td>
       <td>1967</td>
-      <td>71.430</td>
+      <td>71.43</td>
       <td>100825279</td>
       <td>9847.788607</td>
       <td>JPN</td>
@@ -7287,172 +5235,29 @@ if (outputEl) {{
       <td>Japan</td>
       <td>Asia</td>
       <td>1972</td>
-      <td>73.420</td>
+      <td>73.42</td>
       <td>107188273</td>
       <td>14778.786360</td>
       <td>JPN</td>
       <td>392</td>
     </tr>
     <tr>
-      <th>797</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>1977</td>
-      <td>75.380</td>
-      <td>113872473</td>
-      <td>16610.377010</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>798</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>1982</td>
-      <td>77.110</td>
-      <td>118454974</td>
-      <td>19384.105710</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>799</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>1987</td>
-      <td>78.670</td>
-      <td>122091325</td>
-      <td>22375.941890</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>800</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>1992</td>
-      <td>79.360</td>
-      <td>124329269</td>
-      <td>26824.895110</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>801</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>1997</td>
-      <td>80.690</td>
-      <td>125956499</td>
-      <td>28816.584990</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>802</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>2002</td>
-      <td>82.000</td>
-      <td>127065841</td>
-      <td>28604.591900</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>803</th>
-      <td>Japan</td>
-      <td>Asia</td>
-      <td>2007</td>
-      <td>82.603</td>
-      <td>127467972</td>
-      <td>31656.068060</td>
-      <td>JPN</td>
-      <td>392</td>
-    </tr>
-    <tr>
-      <th>1500</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1952</td>
-      <td>58.500</td>
-      <td>8550362</td>
-      <td>1206.947913</td>
-      <td>TWN</td>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>1501</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1957</td>
-      <td>62.400</td>
-      <td>10164215</td>
-      <td>1507.861290</td>
-      <td>TWN</td>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>1502</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1962</td>
-      <td>65.200</td>
-      <td>11918938</td>
-      <td>1822.879028</td>
-      <td>TWN</td>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>1503</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1967</td>
-      <td>67.500</td>
-      <td>13648692</td>
-      <td>2643.858681</td>
-      <td>TWN</td>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>1504</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1972</td>
-      <td>69.390</td>
-      <td>15226039</td>
-      <td>4062.523897</td>
-      <td>TWN</td>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>1505</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1977</td>
-      <td>70.590</td>
-      <td>16785196</td>
-      <td>5596.519826</td>
-      <td>TWN</td>
-      <td>158</td>
-    </tr>
-    <tr>
-      <th>1506</th>
-      <td>Taiwan</td>
-      <td>Asia</td>
-      <td>1982</td>
-      <td>72.160</td>
-      <td>18501390</td>
-      <td>7426.354774</td>
-      <td>TWN</td>
-      <td>158</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>1507</th>
       <td>Taiwan</td>
       <td>Asia</td>
       <td>1987</td>
-      <td>73.400</td>
+      <td>73.40</td>
       <td>19757799</td>
       <td>11054.561750</td>
       <td>TWN</td>
@@ -7463,7 +5268,7 @@ if (outputEl) {{
       <td>Taiwan</td>
       <td>Asia</td>
       <td>1992</td>
-      <td>74.260</td>
+      <td>74.26</td>
       <td>20686918</td>
       <td>15215.657900</td>
       <td>TWN</td>
@@ -7474,7 +5279,7 @@ if (outputEl) {{
       <td>Taiwan</td>
       <td>Asia</td>
       <td>1997</td>
-      <td>75.250</td>
+      <td>75.25</td>
       <td>21628605</td>
       <td>20206.820980</td>
       <td>TWN</td>
@@ -7485,7 +5290,7 @@ if (outputEl) {{
       <td>Taiwan</td>
       <td>Asia</td>
       <td>2002</td>
-      <td>76.990</td>
+      <td>76.99</td>
       <td>22454239</td>
       <td>23235.423290</td>
       <td>TWN</td>
@@ -7496,7 +5301,7 @@ if (outputEl) {{
       <td>Taiwan</td>
       <td>Asia</td>
       <td>2007</td>
-      <td>78.400</td>
+      <td>78.40</td>
       <td>23174294</td>
       <td>28718.276840</td>
       <td>TWN</td>
@@ -7504,6 +5309,7 @@ if (outputEl) {{
     </tr>
   </tbody>
 </table>
+<p>24 rows × 8 columns</p>
 </div></div></div>
 </div>
 <ul class="simple">
@@ -7534,7 +5340,7 @@ if (outputEl) {{
 <section id="tidy">
 <h3>tidyデータ<a class="headerlink" href="#tidy" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>ハドリー・ウィッカムは、整然(tidy)データの条件として以下の4つを挙げています（https://ja.wikipedia.org/wiki/Tidy_data）。</p>
+<li><p>ハドリー・ウィッカムは、整然(tidy)データの条件として以下の4つを挙げています（<a class="reference external" href="https://ja.wikipedia.org/wiki/Tidy_data%EF%BC%89%E3%80%82">https://ja.wikipedia.org/wiki/Tidy_data）。</a></p>
 <ul>
 <li><p>個々の変数 (variable) が1つの列 (column) をなす。</p></li>
 <li><p>個々の観測 (observation) が1つの行 (row) をなす。</p></li>
@@ -7635,16 +5441,10 @@ if (outputEl) {{
       <td>14778.786360</td>
     </tr>
     <tr>
-      <th>797</th>
-      <td>1977</td>
-      <td>75.380</td>
-      <td>16610.377010</td>
-    </tr>
-    <tr>
-      <th>798</th>
-      <td>1982</td>
-      <td>77.110</td>
-      <td>19384.105710</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>799</th>
@@ -7678,6 +5478,7 @@ if (outputEl) {{
     </tr>
   </tbody>
 </table>
+<p>12 rows × 3 columns</p>
 </div></div></div>
 </div>
 <ul class="simple">
@@ -7723,148 +5524,71 @@ if (outputEl) {{
       <th>0</th>
       <td>1952</td>
       <td>lifeExp</td>
-      <td>63.030000</td>
+      <td>63.03000</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1957</td>
       <td>lifeExp</td>
-      <td>65.500000</td>
+      <td>65.50000</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1962</td>
       <td>lifeExp</td>
-      <td>68.730000</td>
+      <td>68.73000</td>
     </tr>
     <tr>
       <th>3</th>
       <td>1967</td>
       <td>lifeExp</td>
-      <td>71.430000</td>
+      <td>71.43000</td>
     </tr>
     <tr>
       <th>4</th>
       <td>1972</td>
       <td>lifeExp</td>
-      <td>73.420000</td>
+      <td>73.42000</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>1977</td>
-      <td>lifeExp</td>
-      <td>75.380000</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>1982</td>
-      <td>lifeExp</td>
-      <td>77.110000</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>1987</td>
-      <td>lifeExp</td>
-      <td>78.670000</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>1992</td>
-      <td>lifeExp</td>
-      <td>79.360000</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>1997</td>
-      <td>lifeExp</td>
-      <td>80.690000</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>2002</td>
-      <td>lifeExp</td>
-      <td>82.000000</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>2007</td>
-      <td>lifeExp</td>
-      <td>82.603000</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>1952</td>
-      <td>gdpPercap</td>
-      <td>3216.956347</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>1957</td>
-      <td>gdpPercap</td>
-      <td>4317.694365</td>
-    </tr>
-    <tr>
-      <th>14</th>
-      <td>1962</td>
-      <td>gdpPercap</td>
-      <td>6576.649461</td>
-    </tr>
-    <tr>
-      <th>15</th>
-      <td>1967</td>
-      <td>gdpPercap</td>
-      <td>9847.788607</td>
-    </tr>
-    <tr>
-      <th>16</th>
-      <td>1972</td>
-      <td>gdpPercap</td>
-      <td>14778.786360</td>
-    </tr>
-    <tr>
-      <th>17</th>
-      <td>1977</td>
-      <td>gdpPercap</td>
-      <td>16610.377010</td>
-    </tr>
-    <tr>
-      <th>18</th>
-      <td>1982</td>
-      <td>gdpPercap</td>
-      <td>19384.105710</td>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
       <th>19</th>
       <td>1987</td>
       <td>gdpPercap</td>
-      <td>22375.941890</td>
+      <td>22375.94189</td>
     </tr>
     <tr>
       <th>20</th>
       <td>1992</td>
       <td>gdpPercap</td>
-      <td>26824.895110</td>
+      <td>26824.89511</td>
     </tr>
     <tr>
       <th>21</th>
       <td>1997</td>
       <td>gdpPercap</td>
-      <td>28816.584990</td>
+      <td>28816.58499</td>
     </tr>
     <tr>
       <th>22</th>
       <td>2002</td>
       <td>gdpPercap</td>
-      <td>28604.591900</td>
+      <td>28604.59190</td>
     </tr>
     <tr>
       <th>23</th>
       <td>2007</td>
       <td>gdpPercap</td>
-      <td>31656.068060</td>
+      <td>31656.06806</td>
     </tr>
   </tbody>
 </table>
+<p>24 rows × 3 columns</p>
 </div></div></div>
 </div>
 <ul class="simple">
@@ -7963,7 +5687,7 @@ if (outputEl) {{
 <h3>世界銀行の出生率データ<a class="headerlink" href="#id34" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>生データの処理の実例を見てみます。
-https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</p></li>
+<a class="reference external" href="https://data.worldbank.org/indicator/SP.DYN.TFRT.IN">https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</a></p></li>
 <li><p>世界銀行の出生率データを可視化してみます。</p></li>
 <li><p>生データの処理はいろいろ面倒です。</p></li>
 </ul>
@@ -8335,7 +6059,7 @@ https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</p></li>
 </div>
 <section id="chetty-2022">
 <h4>Chetty(2022)のデータ<a class="headerlink" href="#chetty-2022" title="Link to this heading">#</a></h4>
-<p>https://opportunityinsights.org/data/</p>
+<p><a class="reference external" href="https://opportunityinsights.org/data/">https://opportunityinsights.org/data/</a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -9608,7 +7332,7 @@ https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</p></li>
 <section id="id36">
 <h4>問題<a class="headerlink" href="#id36" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>上のコードを参考に東京都の合計特殊出生率の時系列推移（[https://www.hokeniryo.metro.tokyo.lg.jp/kiban/chosa_tokei/jinkodotaitokei/kushityosonbetsu.files/04goukei.csv]）をプロットしてください。</p></li>
+<li><p>上のコードを参考に東京都の合計特殊出生率の時系列推移（[<a class="reference external" href="https://www.hokeniryo.metro.tokyo.lg.jp/kiban/chosa_tokei/jinkodotaitokei/kushityosonbetsu.files/04goukei.csv">https://www.hokeniryo.metro.tokyo.lg.jp/kiban/chosa_tokei/jinkodotaitokei/kushityosonbetsu.files/04goukei.csv</a>]）をプロットしてください。</p></li>
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -9787,7 +7511,7 @@ https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</p></li>
 <section id="id37">
 <h4>問題<a class="headerlink" href="#id37" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p>国勢調査の時系列データ[https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031523105&amp;fileKind=1]を使って全年齢に関する人口の時系列推移をプロットしてください。</p></li>
+<li><p>国勢調査の時系列データ[<a class="reference external" href="https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031523105&amp;amp;fileKind=1">https://www.e-stat.go.jp/stat-search/file-download?statInfId=000031523105&amp;fileKind=1</a>]を使って全年齢に関する人口の時系列推移をプロットしてください。</p></li>
 </ul>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
@@ -9921,7 +7645,7 @@ https://data.worldbank.org/indicator/SP.DYN.TFRT.IN</p></li>
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -10065,8 +7789,8 @@ By 瀧川裕貴
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
