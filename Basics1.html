@@ -14,19 +14,19 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
@@ -37,9 +37,9 @@
     <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -57,7 +57,10 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Basics1';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pandas入門" href="Pandas.html" />
@@ -71,27 +74,23 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -113,8 +112,13 @@
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
     </header>
   
 
@@ -181,6 +185,7 @@
 <li class="toctree-l1"><a class="reference internal" href="Colab.html">Colabについて</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2023瀧川ゼミ計算社会科学ハンズオンセミナー1</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Pandas.html">pandas入門</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Plotly.html">plotly入門</a></li>
 </ul>
 
     </div>
@@ -196,7 +201,7 @@
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -205,7 +210,7 @@
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
@@ -222,6 +227,53 @@
         <div class="header-article-item">
 
 <div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/berutaki/UTCSS_BOOK" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/berutaki/UTCSS_BOOK/issues/new?title=Issue%20on%20page%20%2FBasics1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
 
 
 
@@ -483,7 +535,7 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="id1">
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
 <h1>2023瀧川ゼミ計算社会科学ハンズオンセミナー1<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <section id="python">
 <h2>Pythonの基本の基本<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
@@ -496,7 +548,7 @@ document.write(`
 <ul class="simple">
 <li><p>Pythonの演算子を表にまとめました。累乗<code class="docutils literal notranslate"><span class="pre">**</span></code>、整数の割り算<code class="docutils literal notranslate"><span class="pre">//</span></code>の記法には注意。</p></li>
 </ul>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>演算子</p></th>
 <th class="head"><p>演算</p></th>
@@ -526,6 +578,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <div class="admonition- admonition">
 <p class="admonition-title">各種計算</p>
 <p>以下では各種の計算をします。</p>
@@ -1019,7 +1072,7 @@ document.write(`
 <li><p>このような演算は、比較演算子と論理演算子で行われ、演算の結果ブール型が生み出されます。</p></li>
 <li><p>論理演算子</p></li>
 </ul>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>演算子</p></th>
 <th class="head text-center"><p>意味</p></th>
@@ -1037,10 +1090,11 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <ul class="simple">
 <li><p>比較演算子</p></li>
 </ul>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>演算子</p></th>
 <th class="head text-center"><p>意味</p></th>
@@ -1067,6 +1121,7 @@ document.write(`
 </tr>
 </tbody>
 </table>
+</div>
 <ul class="simple">
 <li><p>以下で例をみていきます。</p></li>
 </ul>
@@ -1526,12 +1581,12 @@ b
 <li><p>ここで、プログラミングらしい課題としてユークリッドの互除法というアルゴリズムの実装にトライしてみましょう。</p></li>
 <li><p>ユークリッドの互除法とは、2つの整数、aとbの最大公約数を求めるアルゴリズムです。例えば、2485と1162の最大公約数を求めたい場合</p></li>
 </ul>
-<p>$2485 \div1162 = 2 余り 161$</p>
-<p>$1162 \div 161 = 7 余り 35$</p>
-<p>$161 \div 35 = 4 余り 21$</p>
-<p>$35 \div 21 = 1 余り 14$</p>
-<p>$21 \div 14 = 1 余り 7$</p>
-<p>$14 \div 7 = 2 余り 0$</p>
+<p><span class="math notranslate nohighlight">\(2485 \div1162 = 2 余り 161\)</span></p>
+<p><span class="math notranslate nohighlight">\(1162 \div 161 = 7 余り 35\)</span></p>
+<p><span class="math notranslate nohighlight">\(161 \div 35 = 4 余り 21\)</span></p>
+<p><span class="math notranslate nohighlight">\(35 \div 21 = 1 余り 14\)</span></p>
+<p><span class="math notranslate nohighlight">\(21 \div 14 = 1 余り 7\)</span></p>
+<p><span class="math notranslate nohighlight">\(14 \div 7 = 2 余り 0\)</span></p>
 <p>割る数と余りを次回の割られる数と割る数にして、次々と計算し、最後に割り切れたら終わりで、最後の割る数が最大公約数です。</p>
 </section>
 <section id="id24">
@@ -1629,9 +1684,9 @@ b
 <section id="id28">
 <h3>問題3-3<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <p>フィボナッチ数列の要素を生成し続けます。要素が1000を超えるような最初のフィボナッチ数を求めてください。
-$$F_0 = 0$$
-$$F_1 = 1$$
-$$F_{n+2} = F_n + F_{n+1} (n ≥ 0)$$</p>
+$<span class="math notranslate nohighlight">\(F_0 = 0\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(F_1 = 1\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(F_{n+2} = F_n + F_{n+1} (n ≥ 0)\)</span>$</p>
 <div class="cell tag_remove-input docutils container">
 </div>
 <div class="cell docutils container">
@@ -1821,7 +1876,7 @@ $$F_{n+2} = F_n + F_{n+1} (n ≥ 0)$$</p>
 <ul class="simple">
 <li><p>文字列を操作するメソッドはさまざまです。ここでは特に使用頻度の高いものをピックアップして紹介します。</p></li>
 </ul>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>機能</p></th>
 <th class="head"><p>メソッド</p></th>
@@ -1848,6 +1903,7 @@ $$F_{n+2} = F_n + F_{n+1} (n ≥ 0)$$</p>
 </tr>
 </tbody>
 </table>
+</div>
 <section id="join">
 <h4>結合、<code class="docutils literal notranslate"><span class="pre">+</span></code>、join()メソッド<a class="headerlink" href="#join" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -2424,7 +2480,7 @@ $$F_{n+2} = F_n + F_{n+1} (n ≥ 0)$$</p>
 <ul class="simple">
 <li><p>リストにも専用のメソッドがある。またリストによく使う関数もある。</p></li>
 </ul>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>機能</p></th>
 <th class="head"><p>メソッド・関数</p></th>
@@ -2454,6 +2510,7 @@ $$F_{n+2} = F_n + F_{n+1} (n ≥ 0)$$</p>
 </tr>
 </tbody>
 </table>
+</div>
 <section id="len-sum">
 <h4>len()関数とsum()関数<a class="headerlink" href="#len-sum" title="Link to this heading">#</a></h4>
 <ul class="simple">
@@ -5057,7 +5114,7 @@ sample.csv
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -5285,8 +5342,8 @@ By 瀧川裕貴
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
   </footer>
