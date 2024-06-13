@@ -38,6 +38,8 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_head_files:
+  - _templates/custom_header.html
 #html:
 #  mathjax: true
 

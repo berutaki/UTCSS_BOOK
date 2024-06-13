@@ -8,3 +8,4 @@ chapters:
 - file: Colab
 - file: Basics1
 - file: Pandas
+- file: Plotly
